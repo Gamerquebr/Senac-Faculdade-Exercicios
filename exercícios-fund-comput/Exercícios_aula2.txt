@@ -1,0 +1,74 @@
+Exercícios – Proposições, Conectivos e Tabela-Verdade
+1) Quais das sentenças a seguir são proposições:
+X a) A lua é um satélite da terra. X
+b) Viajaremos amanhã.
+X c) Nove é um número primo.  X
+d) Amanhã irá chover?
+e) Que dia lindo!
+X f) x2 – 4 = 0 X
+X g) 5 + 3 / 2 = (5 + 3) / 2 X
+
+2) Qual o valor lógico de cada uma das proposições a seguir? Apresente o desenvolvimento.
+a) 8 é par ou 6 é ímpar.
+	V	F
+	    V   
+
+b) 8 é par e 6 é ímpar.
+	V	F
+	    F
+
+c) 8 é ímpar ou 6 é ímpar.
+	F	F
+	    F
+d) 8 é ímpar e 6 é ímpar.
+	F	F
+	    F
+
+3) Sabendo que os valores-verdade das proposições p e q são respectivamente V e F, determine o valor lógico
+(V ou F) de cada uma das seguintes proposições:
+
+P = V, Q = F, ~P = F, ~Q = V
+
+a) p ^ ~q
+   V   V
+     V
+
+b) p v ~q
+   V   V
+     V
+
+c) ~p ^ q
+    F   F
+      F
+
+d) ~p ^ ~q
+    F   V
+      F    
+
+e) ~p v ~q
+    F   V
+      V
+
+
+f) p ^ (~p v q)
+	 F   F
+	   F
+	 V   F
+	   F
+	   
+
+
+
+4) Determine o “p” em cada um dos seguintes casos:
+a) q = V e p ^ q = F
+	   ? e V = F
+	   F e V = F
+
+   p = F
+
+
+b) q = F e p v q = F
+	   ? ou q = F
+           F ou F = F
+   p = F
+                  

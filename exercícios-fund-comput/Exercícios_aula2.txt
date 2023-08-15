@@ -5,7 +5,7 @@ b) Viajaremos amanhã.
 X c) Nove é um número primo.  X
 d) Amanhã irá chover?
 e) Que dia lindo!
-X f) x2 – 4 = 0 X
+f) x2 – 4 = 0
 X g) 5 + 3 / 2 = (5 + 3) / 2 X
 
 2) Qual o valor lógico de cada uma das proposições a seguir? Apresente o desenvolvimento.

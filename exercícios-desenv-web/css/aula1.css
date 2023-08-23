@@ -1,28 +1,113 @@
+/*Estilos universais*/
 body{
     font-family: "Lucida Console", "Courier New", monospace;
     background-color: skyblue;
     cursor: default;
-}
-h1, h2, h3, h4, h5, h6, p{
     text-align: center;
 }
+
+/* UwU e animação */ 
 span{
-    transition: all 0.2s;
+    display: inline-block;
+    animation-name: uwu;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
-span:hover{
-    font-size: 3rem;
-    color: rgb(240, 139, 172);
+@keyframes uwu {
+    from{
+        font-size: 1.5rem;
+        color: black;
+        transform: rotate(10deg);
+    }
+    to{
+        color: rgb(240, 139, 172);
+        font-size: 3rem;
+        transform: rotate(-10deg);
+    }
 }
+
+/*Palavras arco-íris e animação*/
+div > h1, h2, h3, h4, h5, h6{
+    animation-name: arco-íris;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes arco-íris {
+    0% {
+        color: red;
+    }
+    16% {
+        color: orange;
+    }
+    32%{
+        color: yellow;
+    }
+    48%{
+        color: greenyellow;
+    }
+    64%{
+        color: aqua;
+    }
+    80%{
+        color: blue;
+    }
+    100%{
+        color: violet;
+    }
+}
+
+/*Parágrafo e animação*/
+.conteiner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conteiner div{
+    display: inline-block;
+}
+p{
+    font-size: 1.5rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: escrevendo 2.5s steps(26) both;
+}
+@keyframes escrevendo{
+    0% {width: 0;}
+    20% {width: 0;}
+    100% {width: 100%;}
+}
+
+
+
+/*Gifs responsivos */
 img{
     display:block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
     transition: all 0.5s;
+
+    border: outset rgb(240, 139, 172);
+    border-radius: 10%;
+    margin-bottom: 10px;
 }
 img:hover{
     width: 30%;
 }
+@media screen and (max-width: 900px) {
+    img{
+        width: 50%;
+    }
+    img:hover{
+        width: 60%;
+    }
+}
+
+/*Links centralizados*/
 a{
     margin-top: 30px;
     display: block;

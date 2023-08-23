@@ -10,6 +10,7 @@ for (let i = 0; i < escolha; i++){
     notas [i] = +prompt("Me dê uma nota: ")
 }
 
+
 let média = 0
 
 for (let i = 0; i < notas.length; i++) {

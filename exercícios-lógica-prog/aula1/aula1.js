@@ -1,3 +1,4 @@
+//npm i prompt-sync 
 //- Ler modelo e ano do veículo de um cliente. Exibir, por exemplo:
 //Você possui um Palio, ano 2015
 

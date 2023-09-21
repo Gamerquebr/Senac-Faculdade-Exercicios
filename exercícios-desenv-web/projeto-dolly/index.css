@@ -1,0 +1,33 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    border: 2px solid black;
+}
+.main{
+    height: auto;
+    width: 75vw;
+}
+.colunas{
+    width: 25%;
+    background-image: url(https://m.media-amazon.com/images/I/41ypG9SRylL._AC_UF894,1000_QL80_.jpg);
+}
+
+p{
+    font-size: 1.5rem;
+}
+.imagem-conteiner{
+    position: relative;
+    width: 25vw;
+}
+img{
+    
+    position: fixed;
+    width: 25vw
+}

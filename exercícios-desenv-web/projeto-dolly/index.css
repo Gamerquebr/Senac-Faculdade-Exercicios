@@ -1,39 +1,116 @@
+
 *{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 body{
+    background-color: #DEEAB9;
     display: flex;
 }
 .conteudo{
+    border-right: 2px dashed black;
     font-size: x-large;
-    width: 75%;
+    width: 85%;
+    padding-right: 20px;
 }
 h1{
     text-align: center;
 }
 
-.timeline ul{
-    position: fixed;
+ul{
     list-style: none;
+    border: 2px solid black;
+    background-color: rgb(255, 136, 136);
 }
 a{
+    color: rgb(0, 0, 0);
+
+    font-weight: bold;
     text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
+@media only screen and (min-width: 768px) {
+
+    .timeline{
+        position: fixed;
+
+        width: 15%;
+        max-width: 200px;
+        min-width: 150px;
+
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    ul{
+        text-align: center;
+        padding-left: 0;
+        right: 10vw;
+    }
+    li{
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    li:first-child{
+        border-top: none;
+    }
+    li:last-child{
+        border-bottom: none;
+    }
+    hr{
+        width: 95%;
+        border-radius: 100%;
+        border: 1px solid black;
+    }
+    a{
+        font-size: x-large;
+
+    }
 }
 @media only screen and (max-width: 768px) {
+    * {
+        scroll-padding-top: 50px;
+    }
     body {
-      flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     .conteudo {
         width: 100%;
+        margin-top: 15px;
     }
-    .timeline ul{
+
+    ul{
         display: flex;
-        width: 100%;
-        align-content: right;
         position: fixed;
-        background-color: black;
+        
+        width: 99%;
+        padding: 5px;
+        
+        top: -16px;
+        left: 0px;
+
     }
-    .timeline li{
-        display: inline;
+
+    hr{
+        display: none;
+    }
+    a{
+        padding: 10px;
+    }
+    li{
+        text-align: center;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    li:first-child{
+        border-left: none;
+    }
+    li:last-child{
+        border-right: none;
     }
   }

@@ -1,33 +1,39 @@
 *{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 body{
     display: flex;
-    justify-content: center;
+}
+.conteudo{
+    font-size: x-large;
+    width: 75%;
+}
+h1{
+    text-align: center;
 }
 
-div{
-    border: 2px solid black;
-}
-.main{
-    height: auto;
-    width: 75vw;
-}
-.colunas{
-    width: 25%;
-    background-image: url(https://m.media-amazon.com/images/I/41ypG9SRylL._AC_UF894,1000_QL80_.jpg);
-}
-
-p{
-    font-size: 1.5rem;
-}
-.imagem-conteiner{
-    position: relative;
-    width: 25vw;
-}
-img{
-    
+.timeline ul{
     position: fixed;
-    width: 25vw
+    list-style: none;
 }
+a{
+    text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+    body {
+      flex-direction: column-reverse;
+    }
+    .conteudo {
+        width: 100%;
+    }
+    .timeline ul{
+        display: flex;
+        width: 100%;
+        align-content: right;
+        position: fixed;
+        background-color: black;
+    }
+    .timeline li{
+        display: inline;
+    }
+  }

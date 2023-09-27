@@ -24,14 +24,25 @@ ul{
 
 a{
     color: black;
-
+    
     font-weight: bold;
     text-decoration: none;
-
+    
     transition: color 0.2s;
 }
 a:hover{
     color: rgb(255, 255, 255);
+}
+img{
+    border: 4px solid rgb(255, 136, 136);
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    width: 50%;
+    max-width: 500px;
+    height: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -100,6 +111,8 @@ a:hover{
         font-size: x-large;
 
     }
+
+
 }
 @media only screen and (max-width: 768px) {
     * {

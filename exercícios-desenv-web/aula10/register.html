@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Login</title>
+    <title>Registro</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='conta.css'>
 </head>
@@ -30,17 +30,26 @@
 
         <div class="login">
             <div class="login__header">
-                <h2>Welcome back!</h2>
-                <p>Meet the good taste today</p>
+                <h2>Create your account</h2>
+                <p>It's free and easy</p>
             </div>
             <form class="login__form">
+
+                <label for="nome">Full name</label>
+                <input type="text" name="nome" placeholder="Enter your name">
 
                 <label for="email">E-mail</label>
                 <input type="email" name="email" placeholder="Type your e-mail">
 
                 <label for="senha">Password</label>
                 <input type="password" name="senha" placeholder="Type your password">
-                <a href="#">forgot your password?</a>
+                <p>Must be 8 characters at least</p>
+
+                <div class="login__checkbox">
+                    <input type="checkbox" name="eula">
+                    <label for="eula">By creating a account means you agree to the <a href="#">Terms and Conditions</a>, and our <a href="#">Privacy Policy</a></label>
+                </div>
+
 
                 <input type="submit" name="enviar" value="Sign In">
             </form>
@@ -53,7 +62,7 @@
                     <a href="#"><img src="img/f.png"></a>
                 </div>
 
-                <p class="login__already">Don't have an account? <a href="register.html">Sign up</a></p>
+                <p class="login__already">Already have an account? <a href="login.html">Sign In</a></p>
             </div>
         </div>
     </section>

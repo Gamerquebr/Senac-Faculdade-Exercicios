@@ -23,4 +23,15 @@ do{
     i++
 }while(true)
 
-console.log(nome, acerto)
+console.log('Resultado do concurso\n' + '.'.repeat(30))
+
+for(let i = 0; i < nome.length; i++){
+  
+  if (acerto[i] >= 30){
+    console.log(`${nome[i]} - ${acerto[i]} - Aprovado`)
+  }
+  else{
+    console.log(`${nome[i]} - ${acerto[i]} - Reprovado`)
+  }
+}
+

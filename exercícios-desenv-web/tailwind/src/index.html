@@ -3,11 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+  <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <div class="flex h-5 w-5 bg-slate-900">
-        <h1>vamo la meu fifi</h1>
-    </div>
+
+    <!-- Navbar para telas grandes -->
+    <nav class="espacamento md:flex hidden flex-row justify-between items-center bg-[#00856F] h-16 fixed z-10 w-screen">
+
+        <img src="../img/logo2.svg" class="h-5 flex-initial">
+        <div class="flex md:gap-7 text-[#F7F9F9] flex-row flex-initial">
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Início</a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Sobre</a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Serviços</a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Depoimento</a>
+        </div>
+        <button class="flex-initial uppercase text-[#F7F9F9] hover:bg-[#F7F9F9] hover:text-[#00856F] font-bold border rounded-full px-6 py-2 transition-colors">
+            agendar consulta
+        </button>
+
+    </nav>
+
+    <!-- Navbar para telas pequenas -->
+    <nav class="espacamento md:hidden flex justify-between items-center bg-[#00856F] h-16 fixed z-10 w-screen">
+        <img src="../img/logo2.svg" class="h-5 flex-initial pl-6">
+        <img src="../img/hamburger1.png" class="flex-initial pr-6">
+    </nav>
+
+    <header class="espacamento bg-[#DCE9E2] pt-20 md:pb-[100px] pb-[600px]">
+
+        <div class="h-[650px] flex md:flex-row flex-col items-center md:justify-evenly md:gap-0 gap-14">
+
+            <div class="flex w-[100%] md:w-[40%] flex-col items-center md:items-start md:text-left text-center">
+
+                <span class="text-[#00856F] font-bold text-sm uppercase tracking-wider">
+                    boas-vindas a doctorcare 👋
+                </span>
+                <h1 class="text-[#212529] md:text-5xl text-4xl font-bold leading-[70px] pt-8">
+                    Assistência médica simplificada para todos
+                </h1>
+                <p class="text-[#495057] text-lg py-10">
+                    Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.
+                </p>
+                <button class="h-14 bg-[#00856F] hover:bg-[#00453A] border rounded-full transition-colors">
+                    <div class="flex flex-row items-center px-8">
+                        <img class="h-5 pr-4"src="../img/zap.svg">
+                        <span class="text-[#F7F9F9] font-bold uppercase">agende sua consulta</span>
+                    </div>
+                </button>
+
+            </div>
+
+            <div>
+                <img class="md:h-[580px] h-[495px] md:translate-y-[6%]"src="../img/mulher.png">
+            </div>
+
+        </div>
+
+        
+    </header>
+    
+    <main class="espacamento bg-[#F7F9F9]">
+
+        <div class="bg-[#FFFAF1] rounded-md flex w-[100%] md:flex-row flex-col justify-around items-center translate-y-[-50%]">
+            <div class="flex justify-center flex-col h-52 text-center">
+                <h2 class="text-[#212529] font-bold text-5xl">
+                    +3.500
+                </h2>
+                <span class="text-[#00856F]">
+                    Pacientes atendidos
+                </span>
+            </div>
+    
+            <hr class="md:rotate-90 bg-[#00856F] opacity-50 md:w-20 w-2/4 h-[2px]">
+    
+            <div class="flex justify-center flex-col h-52 text-center">
+                <h2 class="text-[#212529] font-bold text-5xl">
+                    +15
+                </h2>
+                <span class="text-[#00856F]">
+                    Especialistas disponíveis
+                </span>
+            </div>
+    
+            <hr class="md:rotate-90 bg-[#00856F] opacity-50 md:w-20 w-2/4 h-[2px]">
+    
+            <div class="flex justify-center flex-col h-52 text-center">
+                <h2 class="text-[#212529] font-bold text-5xl">
+                    +10
+                </h2>
+                <span class="text-[#00856F]">
+                    Anos no mercado
+                </span>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center w-[90vw] md:translate-y-0 translate-y-[-150%]">
+            <span class="text-[#00856F] text-sm font-bold tracking-wider uppercase">
+                serviços
+            </span>
+            <h2 class="text-center md:w-[450px] md:text-4xl text-3xl font-bold">
+                Como podemos ajudá-lo a se sentir melhor?
+            </h2>
+        </div>
+        
+        <section class="flex flex-wrap items-center justify-center gap-10 pt-10 pb-52">
+
+            <div class="w-[350px] bg-[#FFFFFF] border border-[#DCE9E2] rounded-md">
+                <div class="p-6">
+                    <img class="bg-[#DCE9E2] rounded-full p-1" src="../img/check.png">
+                    <h3 class="font-bold text-2xl text-[#212529] py-4">
+                        Problemas digestivos
+                    </h3>
+                    <p class="text-[#495057]">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[350px] bg-[#FFFFFF] border border-[#DCE9E2] rounded-md">
+                <div class="p-6">
+                    <img class="bg-[#DCE9E2] rounded-full p-1" src="../img/check.png">
+                    <h3 class="font-bold text-2xl text-[#212529] py-4">
+                        Saúde Hormonal
+                    </h3>
+                    <p class="text-[#495057]">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[350px] bg-[#FFFFFF] border border-[#DCE9E2] rounded-md">
+                <div class="p-6">
+                    <img class="bg-[#DCE9E2] rounded-full p-1" src="../img/check.png">
+                    <h3 class="font-bold text-2xl text-[#212529] py-4">
+                        Bem-estar mental
+                    </h3>
+                    <p class="text-[#495057]">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[350px] bg-[#FFFFFF] border border-[#DCE9E2] rounded-md">
+                <div class="p-6">
+                    <img class="bg-[#DCE9E2] rounded-full p-1" src="../img/check.png">
+                    <h3 class="font-bold text-2xl text-[#212529] py-4">
+                        Cuidados Pediátricos
+                    </h3>
+                    <p class="text-[#495057]">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[350px] bg-[#FFFFFF] border border-[#DCE9E2] rounded-md">
+                <div class="p-6">
+                    <img class="bg-[#DCE9E2] rounded-full p-1" src="../img/check.png">
+                    <h3 class="font-bold text-2xl text-[#212529] py-4">
+                        Autoimune e Inflamação
+                    </h3>
+                    <p class="text-[#495057]">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-[350px] bg-[#FFFFFF] border border-[#DCE9E2] rounded-md">
+                <div class="p-6">
+                    <img class="bg-[#DCE9E2] rounded-full p-1" src="../img/check.png">
+                    <h3 class="font-bold text-2xl text-[#212529] py-4">
+                        Saúde do Coração
+                    </h3>
+                    <p class="text-[#495057]">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="espacamento flex-wrap-reverse bg-[#FFFAF1] w-[100vw] h-[1000px] translate-x-[-5%] flex flex-row justify-evenly items-center gap-16">
+            <div>
+                <img src="../img/anuncio1.png">
+            </div>
+            <div class="md:w-[600px]">
+                <span class="text-[#00856F] text-sm font-bold tracking-wider uppercase">
+                    sobre nós
+                </span>
+                <h2 class="md:w-[450px] md:text-4xl text-3xl font-bold py-8">
+                    Entenda quem somos e por que existimos
+                </h2>
+                <p class="text-[#495057]">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>
+                    Entre em contato com a gente
+                </h2>
+                <span>
+                    <img src="../img/gps.png">
+                    R. Amauri Souza, 346
+                </span>
+                <span>
+                    <img src="../img/email.png">
+                    contato@doctorcare.com
+                </span>
+                <button>
+                    <img src="../img/zap.svg">
+                    agende sua consulta
+                </button>
+            </div>
+            <div>
+                <img src="../img/anuncio2.png">
+            </div>
+        </section>
+    </main>
+    <footer clas="espacamento">
+        <div>
+            <img src="../img/logo2.svg">
+            <small>
+                ©2022 - DoctorCare.
+            </small>
+            <small>
+                Todos os direitos reservados.
+            </small>
+        </div>
+        <div>
+            <img src="../img/insta.png">
+            <img src="../img/face.png">
+            <img src="../img/yt.png">
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+* {
+    margin:0;
+    padding:0;
+    --laranja_primário:#F14336;
+    --laranja_secundário:#F16063;
+}
+.main{
+    display:flex;
+    height:100vh;
+}
+.conteiner{
+    display:flex;
+    height:inherit;
+    justify-content:center;
+    width:50vw;
+    align-items:center;
+    min-height:700px;
+}
+@media only screen and (max-width: 825px){
+    .main{
+        flex-direction:column;
+    }
+    .conteiner{
+        width:100vw;
+    }
+}
+.main > .conteiner {
+    background-color:var(--laranja_primário);
+}
+.main > .conteiner ~ .conteiner{
+    background-color:#FFFFFF;
+}
+.entrar, .boasvindas{
+    height:700px;
+    width:550px;
+}
+.entrar{
+    font-family:'Inter', sans-serif;
+    flex-direction:column;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.cabecalho{
+    padding-bottom:45px;
+}
+.cabecalho *{
+    width:350px;
+    padding-bottom:15px;
+}
+.cabecalho h2{
+    color:var(--laranja_primário);
+}
+.cabecalho p{
+    color:var(--laranja_secundário);
+}
+.formulario{
+    display:flex;
+    width:350px;
+    flex-direction:column;
+}
+fieldset, section, textarea, input{
+    background-color:transparent;
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+    border:none;
+    appearance:none;
+}
+label{
+    font-size:small;
+    color:var(--laranja_secundário);
+    padding-bottom:5px;
+}
+input:not(input[type="password"]){
+    margin-bottom:30px;
+}
+.formulario a{
+    text-align:right;
+    font-size:x-small;
+    color:var(--laranja_primário);
+    padding-top:5px;
+}
+.formulario p{
+    color:var(--laranja_primário);
+    padding-top:5px;
+    font-size:x-small;
+}
+input[type="email"], input[type="password"], input[type="text"]{
+    height:40px;
+    border-radius:6px;    
+    background-color:#F1606310;
+    color:var(--laranja_primário);
+    text-indent:15px;
+}
+input::placeholder{
+    opacity:1;
+}
+input[type="submit"]{
+    margin-top:25px;
+    height:35px;
+    cursor:pointer;
+    background-color:var(--laranja_primário);
+    color:#FFFFFF;
+    border-radius:90px;
+}
+.check{
+    display:flex;
+    gap: 10px;
+    padding-top:20px;
+}
+input[type="checkbox"]{
+    border-radius:4px;
+    height:18px;
+    width:18px;
+    border:2px solid gray;
+    flex-shrink:0;
+}
+input[type="checkbox"]:checked::after{
+    display:block;
+    content:"X";
+    color:var(--laranja_primário);
+    transform:translate(3px, -2px);
+}
+.check label{
+    font-size:x-small;
+}
+.check a{
+    font-weight:bold;
+    font-size:inherit;
+}
+.contas{
+    color:var(--laranja_primário);
+    font-size:x-small;
+    text-align:center;
+}
+.imgs{
+    justify-content:center;
+    display:flex;
+    width:350px;
+    gap:20px;
+    padding-top:18px;
+}
+.imgs a{
+    width:50px;
+    height:50px;
+}
+.servicos{
+    padding-top:50px;
+    font-size:smaller;
+    text-align:center;
+    color:var(--laranja_primário);
+}
+.servicos a{
+    font-weight:bold;
+    color:var(--laranja_primário);
+}
+.boasvindas{
+    display:flex;
+    font-family:'DM Sans', sans-serif;
+    align-items:center;
+    flex-direction:column;
+    border-radius:50px;
+}
+.logomarca{
+    width:100%;
+    height:30%;
+}
+.botao{
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    color:var(--laranja_primário);
+    width:125px;
+    border-radius:90px;
+    transform:translate(40px, 40px);
+    justify-content:center;
+    height:45px;
+    background-color:#FFFFFF;
+}
+.texto{
+    color:#FFFFFF;
+    align-items:center;
+    display:flex;
+    width:65%;
+    justify-content:center;
+    flex-direction:column;
+}
+.texto h1{
+    padding-bottom:30px;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:underline;
+}

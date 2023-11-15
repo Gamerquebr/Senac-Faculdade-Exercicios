@@ -1,7 +1,5 @@
-/*1. Elaborar um programa que leia nome e número de acertos de candidatos de um concurso, até o usuário digitar
-‘Fim’ no nome. Sabendo que para ser aprovado o candidato deve possuir, no mínimo, 30 acertos, exiba os dados
-e a situação do candidato – conforme o exemplo
-*/
+/*2. Elaborar um programa que leia modelo e preço de ‘n’ veículos (até ser digitado ‘Fim’ no modelo) de uma
+revenda. Após, liste os veículos. Informe no final qual o preço médio dos veículos da revenda.*/
 
 
 const prompt = require("prompt-sync")()

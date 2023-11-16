@@ -12,10 +12,18 @@
 
         <img src="../img/logo2.svg" class="h-5 flex-initial">
         <div class="flex md:gap-7 text-[#F7F9F9] flex-row flex-initial">
-            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Início</a>
-            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Sobre</a>
-            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Serviços</a>
-            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">Depoimento</a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
+          Início
+        </a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
+          Sobre
+        </a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
+          Serviços
+        </a>
+            <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
+          Depoimento
+        </a>
         </div>
         <button class="flex-initial uppercase text-[#F7F9F9] hover:bg-[#F7F9F9] hover:text-[#00856F] font-bold border rounded-full px-6 py-2 transition-colors">
             agendar consulta
@@ -38,7 +46,7 @@
                 <span class="text-[#00856F] font-bold text-sm uppercase tracking-wider">
                     boas-vindas a doctorcare 👋
                 </span>
-                <h1 class="text-[#212529] md:text-5xl text-4xl font-bold leading-[70px] pt-8">
+                <h1 class="text-[#212529] md:text-5xl text-4xl font-bold md:leading-[70px] leading-[50px] pt-8">
                     Assistência médica simplificada para todos
                 </h1>
                 <p class="text-[#495057] text-lg py-10">
@@ -182,7 +190,7 @@
 
         </section>
 
-        <section class="espacamento flex-wrap-reverse bg-[#FFFAF1] w-[100vw] h-[1000px] translate-x-[-5%] flex flex-row justify-evenly items-center gap-16">
+        <section class="py-24 espacamento flex-wrap-reverse bg-[#FFFAF1] w-[100vw] h-[1000px] translate-x-[-5%] flex flex-row justify-evenly items-center gap-16">
             <div>
                 <img src="../img/anuncio1.png">
             </div>
@@ -199,22 +207,25 @@
             </div>
         </section>
 
-        <section>
-            <div>
-                <h2>
-                    Entre em contato com a gente
+        <section class="py-24 flex flex-wrap justify-evenly items-center">
+            <div class="md:[600px]">
+                <h2 class="md:w-[450px] md:text-4xl text-3xl font-bold pb-8">
+                    Entre em contato com a gente!
                 </h2>
-                <span>
-                    <img src="../img/gps.png">
-                    R. Amauri Souza, 346
+                <span class="">
+                    <img class="float-left pr-2" src="../img/gps.png">
+                    R. Amauri Souza, 346<br>
+
+                    <br> 
+
+                    <img class="float-left pr-2" src="../img/email.png">
+                    contato@doctorcare.com<br>
                 </span>
-                <span>
-                    <img src="../img/email.png">
-                    contato@doctorcare.com
-                </span>
-                <button>
-                    <img src="../img/zap.svg">
-                    agende sua consulta
+                <button class="h-14 mt-5 mb-10 bg-[#00856F] hover:bg-[#00453A] border rounded-full transition-colors">
+                    <div class="flex flex-row items-center px-8">
+                        <img class="h-5 pr-4"src="../img/zap.svg">
+                        <span class="text-[#F7F9F9] font-bold uppercase">agende sua consulta</span>
+                    </div>
                 </button>
             </div>
             <div>
@@ -222,20 +233,21 @@
             </div>
         </section>
     </main>
-    <footer clas="espacamento">
-        <div>
-            <img src="../img/logo2.svg">
+    <footer class="espacamento bg-[#00856F] flex flex-wrap items-center justify-between py-24">
+        <div class="text-[#FFFFFF]">
+            <img class="h-8" src="../img/logo2.svg">
             <small>
                 ©2022 - DoctorCare.
             </small>
+            <br>
             <small>
                 Todos os direitos reservados.
             </small>
         </div>
-        <div>
-            <img src="../img/insta.png">
-            <img src="../img/face.png">
-            <img src="../img/yt.png">
+        <div class="flex gap-4 w-max">
+            <img class="w-5 h-5" src="../img/insta.png">
+            <img class="w-5 h-5"  src="../img/face.png">
+            <img class="w-5 h-5"  src="../img/yt.png">
         </div>
     </footer>
 </body>

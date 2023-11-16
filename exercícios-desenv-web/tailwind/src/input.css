@@ -7,4 +7,7 @@
     .espacamento {
         @apply px-[5%];
     }
+    .espacamentom {
+        @apply mx-[5%]
+    }
 }

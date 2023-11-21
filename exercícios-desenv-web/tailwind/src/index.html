@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./script.js"></script>
   <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navbar para telas grandes -->
-    <nav class="espacamento md:flex hidden flex-row justify-between items-center bg-[#00856F] h-16 fixed z-10 w-screen">
+    <nav id="hero" class="espacamento navhero md:flex hidden flex-row justify-between items-center h-16 fixed z-10 transition-all w-screen">
 
-        <img src="../img/logo2.svg" class="h-5 flex-initial">
-        <div class="flex md:gap-7 text-[#F7F9F9] flex-row flex-initial">
+        <img id="hero__logo" src="../img/logo1.svg" class="h-5 flex-initial">
+        <div class="flex md:gap-7 text-inherit flex-row flex-initial">
             <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
-          Início
-        </a>
+               Início
+            </a>
             <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
-          Sobre
-        </a>
+                Sobre
+            </a>
             <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
-          Serviços
-        </a>
+                Serviços
+            </a>
             <a href="#" class="hover:opacity-100 opacity-60 hover:underline underline-offset-[24px] decoration-2">
-          Depoimento
-        </a>
+                Depoimento
+            </a>
         </div>
-        <button class="flex-initial uppercase text-[#F7F9F9] hover:bg-[#F7F9F9] hover:text-[#00856F] font-bold border rounded-full px-6 py-2 transition-colors">
+        <button id="hero__botao" class="flex-initial border border-[#00856F]  uppercase text-inherit hover:bg-[#F7F9F9] hover:text-[#00856F] font-bold border-inherit rounded-full px-6 py-2 transition-colors">
             agendar consulta
         </button>
 
@@ -108,7 +109,7 @@
 
         </section>
 
-        <div class="espacamento flex flex-col justify-center items-center w-[90vw] md:translate-y-0 translate-y-[-150%]">
+        <div class="espacamento flex flex-col justify-center items-center w-full md:translate-y-0 translate-y-[-150%]">
             <span class="text-[#00856F] text-sm font-bold tracking-wider uppercase">
                 serviços
             </span>

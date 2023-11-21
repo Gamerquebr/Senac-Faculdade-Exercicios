@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+
+    .navhero{
+      @apply bg-transparent text-[#00856F];
+  }
+    .navdefault{
+      @apply bg-[#00856F] text-[#F7F9F9];  
+    }
+}
+
 @layer base {
 
     .espacamento {

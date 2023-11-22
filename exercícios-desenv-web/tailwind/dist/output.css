@@ -547,6 +547,10 @@ video {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .float-left {
   float: left;
 }
@@ -561,6 +565,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -636,6 +644,10 @@ video {
   width: 100vw;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .flex-initial {
   flex: 0 1 auto;
 }
@@ -658,6 +670,38 @@ video {
 .translate-y-\[-50\%\] {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
+.grid-rows-none {
+  grid-template-rows: none;
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-\[0fr\] {
+  grid-template-rows: 0fr;
+}
+
+.grid-rows-\[1fr\] {
+  grid-template-rows: 1fr;
+}
+
+.grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+.grid-rows-\[0\] {
+  grid-template-rows: 0;
+}
+
+.grid-rows-\[0f1\] {
+  grid-template-rows: 0f1;
 }
 
 .flex-row {
@@ -712,6 +756,10 @@ video {
   gap: 1rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -737,10 +785,6 @@ video {
 .border-\[\#F7F9F9\] {
   --tw-border-opacity: 1;
   border-color: rgb(247 249 249 / var(--tw-border-opacity));
-}
-
-.border-inherit {
-  border-color: inherit;
 }
 
 .bg-\[\#00856F\] {
@@ -958,6 +1002,14 @@ video {
   transition-duration: 150ms;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .navhero {
   background-color: transparent;
   --tw-text-opacity: 1;
@@ -969,6 +1021,10 @@ video {
   background-color: rgb(0 133 111 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(247 249 249 / var(--tw-text-opacity));
+}
+
+.hover\:grid-rows-1:hover {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
 }
 
 .hover\:bg-\[\#00453A\]:hover {
@@ -1021,6 +1077,10 @@ video {
 
   .md\:w-\[600px\] {
     width: 600px;
+  }
+
+  .md\:w-0 {
+    width: 0px;
   }
 
   .md\:translate-y-0 {

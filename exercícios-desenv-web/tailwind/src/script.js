@@ -34,8 +34,12 @@ function navCEL() {
 }
 
 function abrirMenu(){
-  const menu = document.getElementById("heroMENU").classList
-
-  menu.toggle("grid-rows-[0fr]")
-  menu.toggle("grid-rows-1")
+    const menu = document.getElementById("heroMENU").classList
+    if (menu.contains("hidden")){
+        
+        menu.replace("hidden", "flex")
+    }
+    else{
+        menu.replace("flex", "hidden")
+    }
 }

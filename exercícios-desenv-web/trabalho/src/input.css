@@ -13,7 +13,7 @@
 
 @layer components{
   .carrossel{
-    @apply px-[5vw] py-[2vw];
+    @apply px-[5vw] py-[2vw]
   }
   .carrossel > h2 {
     @apply text-center opacity-80 py-10;

@@ -4,31 +4,45 @@
 
 @layer base{
   body{
+
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(106,51,51,1) 37%, rgba(36,54,57,1) 82%);
+
     color: white;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 2rem;
+
   }
 }
 
 @layer components{
   .carrossel{
-    @apply px-[5vw] py-[2vw]
-  }
-  .carrossel > h2 {
-    @apply text-center opacity-80 py-10;
+
+    @apply px-[5vw] py-[2vw];
+
+    > h2 {
+
+      @apply text-center opacity-80 py-10;
+
+    }
+
+    .carrossel__conteiner{
+
+      @apply grid justify-items-center lg:grid-cols-4 lg:grid-rows-none sm:grid-cols-2 sm:grid-rows-2 gap-10; 
+
+      .carrossel__item{
+
+        @apply lg:w-[20vw] sm:w-[40vw] w-[60vw] lg:hover:w-[25vw] sm:hover:w-[45vw] hover:w-[70vw] transition-all;
+
+        > img{
+
+          @apply w-full border-2 border-white opacity-80 hover:opacity-100 transition-opacity; 
+
+        }
+      }
+    }
   }
   
-  .carrossel__conteiner{
-    @apply grid justify-items-center lg:grid-cols-4 lg:grid-rows-none sm:grid-cols-2 sm:grid-rows-2 gap-10; 
-  }
 
-  .carrossel__item{
-    @apply lg:w-[20vw] sm:w-[40vw] w-[60vw] lg:hover:w-[25vw] sm:hover:w-[45vw] hover:w-[70vw] transition-all;
-  }
-  .carrossel__item > img{
-    @apply w-full border-2 border-white opacity-80 hover:opacity-100 transition-opacity; 
-  }
 
 
   

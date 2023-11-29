@@ -11,6 +11,11 @@
 
 <body>
 
+  <dialog class="w-[90vw] h-[90vh]" id="foo"><p>Hello! I'm a modal dialog...</p></dialog>
+  <button id="open">Open Dialog</button>
+  <script>
+    document.getElementById('open').onclick = () => foo.showModal();
+  </script>
 
   <section class="carrossel">
     <h2>

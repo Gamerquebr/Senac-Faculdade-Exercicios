@@ -37,8 +37,69 @@
         }
       }
     }
+
   }
   
+  .sugestao{
+    
+    @apply flex justify-center my-10; 
+    
+    .sugestao__link {
+      @apply text-blue-400 hover:underline;
+    }
+  }
+
+  .dialogo{
+
+    @apply text-white w-[95vw] h-[95vh] bg-[#242424f2] rounded-lg;
+
+    .dialogo__fechar{
+      @apply relative w-8 h-8 text-2xl left-5 top-2 border border-white rounded-full bg-black hover:bg-[red] transition-colors;
+    }
+    
+    .dialogo__conteiner{
+
+      @apply grid lg:grid-cols-2 lg:grid-rows-2 grid-rows-4 justify-center gap-[5vw] text-base p-[5vw];
+    
+      > iframe{
+        @apply w-full h-96 rounded-lg justify-self-start;
+      }
+
+      .dialogo__descricao{
+        @apply  bg-[#202020] p-[2vw] rounded-lg row-span-2 place-self-start items-start lg:order-none order-3 lg:translate-y-0 translate-y-[-8rem];
+      }
+
+      .dialogo__detalhes{
+        @apply bg-[#202020] rounded-lg p-[2vw] lg:justify-self-start place-self-start justify-self-center lg:order-none order-2
+      }
+    }
+  }
+
+  .formulario{
+
+    @apply w-96 mt-[5vw] bg-[#242424] flex flex-col rounded-lg gap-5;
+
+    > a{
+      @apply relative left-3 top-3 bg-[#484848] hover:bg-white hover:text-black transition-all border border-white block w-fit rounded-3xl p-2;
+    }
+
+    > h1{
+      @apply pt-[2vw] text-xl text-center;
+    }
+
+    > input {
+      @apply mb-4 mx-12 bg-[#484848] rounded pl-4;
+    }
+
+    > input[type=submit]{
+      @apply rounded-lg hover:bg-white hover:text-black pl-0 mb-10 transition-colors cursor-pointer;
+    }
+
+    > label{
+      @apply ml-12;
+    }
+
+  }
 
 
 

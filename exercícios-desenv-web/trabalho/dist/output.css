@@ -662,14 +662,32 @@ body{
   width: 95vw;
 }
 
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
 .bg-\[\#242424\] {
   --tw-bg-opacity: 1;
   background-color: rgb(36 36 36 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#242424f2\] {
+  background-color: #242424f2;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .opacity-100 {

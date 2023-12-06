@@ -235,7 +235,7 @@ function agrupar(modo){
     const tipo = Number(prompt("Número: "))
     
     //Verifica se o número digitado é válido
-    if (tipo < 1 && tipo > 3){
+    if (tipo < 1 || tipo > 3){
         console.log("\nERRO! Valor inválido :(\n")
         return 1
     }
@@ -343,7 +343,7 @@ function editar(){
             const tipo = Number(prompt("Número: "))
 
             //Verifica se o número digitado é válido
-            if (tipo < 1 && tipo > 3){
+            if (tipo < 1 || tipo > 3){
                 console.log("\nERRO! Valor inválido :(\n")
                 return 1
             }

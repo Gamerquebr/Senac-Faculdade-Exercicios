@@ -1,0 +1,62 @@
+1)
+
+- Falha do Sistema de Registro de Eleitores da Flórida em 2000
+O sistema de votação nas eleições da Flórida em 2000, desenvolvido por uma empresa privada, enfrentou diversas 
+falhas técnicas, assim milhares de Eleitores foram excluídos dos registros eleitorais, impedindo eles de votarem.
+
+- Falha do Projeto de Modernização da Previdência Social do Brasil (Projeto Sispat)
+Em 1990, o governo brasileiro iniciou um projeto de modernizar o sistema de 
+previdência social, conhecido como Projeto Sispat, porém o projeto teve subestimação
+dos requisitos de hardware e software, após anos de desenvolvimento e milhares de reais
+gastos o projeto foi descontinuado.
+
+-Falha do Sistema de Gerenciamento de Emergências 911 no Estado de Washington em 2014
+O sistema CAD(Computer-Aided-Dispatch) enfentrou problemas de desempenho durante um pico de chamadas de Emergência
+assim criando diversos atrasos na resposta de chamadas e no despacho de socorristas.
+
+2)
+
+A falta de organização e coordenação de equipes na época. Por o "boom" inesperado da necessidade de sistemas,
+nasceu-se uma necessidade de sistema mais complexos, sistemas que precisam ser trabalhados por uma grande equipe,
+assim nasceu a engenharia de software, para organizar os projetos.
+
+3)
+
+É um processo essencial, principalmente se é necessário a existência de manutenções futuras de determinado software,
+pois os programadores tendem a esquecer ou apenas não saberem como funciona um determinado sistema, assim precisam
+consultar a documentação ou algum tipo de conteúdo que explique como o sistema de comporta
+
+4)
+
+- A razão pelo qual tudo existe
+
+O softaware precisa comprir um objetivo, resolver algum problema!
+
+- Mantenha as coisas simples (KISS - Keep It Simple ! Stupid)
+
+Não faça um software para resolver todos os problemas do mundo, faça vários softwares que cada um resolve um problema.
+
+- Mantenha o estilo
+
+Não faça um programa que segue um estilo diferente a cada função! deixe tudo conciso.
+
+- O que você produzir alguém vai consumir
+
+Crie programas pensando que alguém algum dia terá que entender esse seu programa, inclusive você mesmo! tente documentar ao máximo
+
+- Esteja aberto para o futuro
+
+Enquanto desevolve o programa já tente facilitar a sua manutenção futura, evite números mágicos ou funções que fazem muitas coisas ao mesmo tempo
+
+- Planeje com antecedência para Reutilização
+
+Pense como as pessoas vão utilizar determinado software, como elas utilizarão, etc.
+
+- Pense!
+
+Pesquise bem antes de começar um projeto, talvez esse seu projeto que você botará horas de esforço... já exista! :O
+
+5)
+
+Não, vai depender muito da pessoa ou da equipe que estiver desenvolvendo o sistema. Talvez mesmo depois de toda organização
+a equipe simplesmente decida não seguir nada. >:( 

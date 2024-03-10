@@ -1,0 +1,79 @@
+h1, h2{
+  text-align: center;
+}
+.opcoes{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  img{
+    width: 500px;
+    height: 500px;
+    
+    &:hover{
+      width: 600px;
+      height: 600px;
+    }
+    
+    transition: all .25s
+  }
+}
+
+@keyframes resposta_certa {
+    0% {
+        color: red;
+    }
+    16% {
+        color: orange;
+    }
+    32%{
+        color: yellow;
+    }
+    48%{
+        color: greenyellow;
+    }
+    64%{
+        color: aqua;
+    }
+    80%{
+        color: blue;
+    }
+    100%{
+        color: violet;
+    }
+}
+@keyframes resposta_errada {
+    from{
+        transform: rotate(10deg);
+    }
+    to{
+        font-size: 2rem;
+        transform: rotate(-10deg);
+    }
+}
+
+
+.certo{
+
+  text-align: center;
+  font-size: 2rem;
+
+  animation-name: resposta_certa;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.errado{
+  text-align: center;
+  color: red;
+
+  animation-name: resposta_errada;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}

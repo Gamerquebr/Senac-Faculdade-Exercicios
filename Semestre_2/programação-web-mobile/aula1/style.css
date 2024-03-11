@@ -1,0 +1,60 @@
+body {
+  --texto_cinza: #667085;   
+  --marca_vermelho: #8E2424;
+
+  font-family:"Inter";
+}
+
+.nav__conteiner{
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 90vw;
+
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+  & img{
+    padding-right: 2.5vw;
+  }
+}
+.nav__links {
+  display: flex;
+  gap: 2rem;
+
+  margin-right: auto;
+
+  list-style-type: none;
+
+  color: var(--texto_cinza);
+
+  & a{
+    color: var(--texto_cinza);
+
+    text-decoration: none;
+
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+.nav__buttons{
+
+  & button{
+    font-weight: 500;
+    font-size: 1rem;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+    border: none;
+  }
+  & button:nth-child(1){
+    background: transparent;
+    color: var(--texto_cinza);
+  } 
+  & button:nth-child(2){
+    background: var(--marca_vermelho);
+    color: white;
+  }
+}

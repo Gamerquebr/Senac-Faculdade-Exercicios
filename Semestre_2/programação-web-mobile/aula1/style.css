@@ -5,7 +5,7 @@ body {
   font-family:"Inter";
 }
 
-.nav__conteiner{
+.nav{
   display: flex;
 
   justify-content: space-between;
@@ -14,12 +14,15 @@ body {
 
   padding-left: 5vw;
   padding-right: 5vw;
+  padding-top: 15px;
 
   & img{
     padding-right: 2.5vw;
   }
 }
 .nav__links {
+  
+
   display: flex;
   gap: 2rem;
 
@@ -28,6 +31,11 @@ body {
   list-style-type: none;
 
   color: var(--texto_cinza);
+
+  /* responsividade de navbar altamente evançada */
+  @media (max-width: 800px){
+    display: none;
+  }
 
   & a{
     color: var(--texto_cinza);
@@ -40,6 +48,11 @@ body {
 }
 .nav__buttons{
 
+  /* responsividade de navbar altamente evançada */
+  @media (max-width: 800px){
+    display: none;
+  }
+
   & button{
     font-weight: 500;
     font-size: 1rem;
@@ -48,13 +61,246 @@ body {
 
     border-radius: 8px;
     border: none;
+
+    cursor: pointer;
+
   }
+
   & button:nth-child(1){
     background: transparent;
     color: var(--texto_cinza);
+
   } 
+
   & button:nth-child(2){
     background: var(--marca_vermelho);
     color: white;
+
+  }
+}
+
+.apresentacao{
+  padding-top: 10vw;
+  padding-bottom: 8vw;
+
+  text-align: center;
+
+  margin: auto;
+  width: 50vw;
+
+  @media (max-width: 1200px){
+    width: 75vw;
+  }
+  @media (max-width: 700px){
+    width: 90vw;
+  }
+
+  & span{
+    color: var(--marca_vermelho);
+
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  & h1{
+    font-size: 3rem;
+  }
+
+  & p{
+    color: var(--texto_cinza);
+
+    font-size: 1.5rem;
+  }
+  
+}
+
+.cards{
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5vw;
+
+  & div{
+    width: 250px;
+  }
+  
+  & strong{
+    color: var(--marca_vermelho);
+
+    font-size: 3.5rem;
+  }
+  & h4{
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  & p{
+    color: var(--texto_cinza);
+
+    font-size: 1.15rem;
+    font-weight: 350;
+
+    translate: 0 -10px;
+  }
+}
+
+.anuncio{
+  padding-top: 10vw;
+
+  text-align: center;
+
+  & span{
+    color: var(--marca_vermelho);
+    background: rgba(142, 36, 36, 0.1);
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+  & h2{
+    font-size: 2.50rem;
+  }
+  & p{
+    color: var(--texto_cinza);
+
+    font-size: 1.5rem;
+  }
+  & img{
+    width: 85vw;
+  }
+}
+
+.vagas{
+  margin: auto;
+
+  max-width: 60vw;
+  min-width: 400px;
+
+  padding-top: 3vw;
+
+  & h4{
+    font-size: 1.20rem;
+    font-weight: 500;
+  }
+}
+.vagas__cards{
+  list-style: none; 
+  padding-left: 0;
+
+  & li{
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #EAECF0;
+    border-radius: 10px;
+
+    padding-left: 10px;
+    margin-top: 15px;
+
+    height: 115px;
+  }
+
+  & h5{
+    font-size: 1.10rem;
+    font-weight: 400;
+  }
+  & span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--texto_cinza)
+  }
+}
+
+.depoimentos{
+  text-align: center;
+  margin: auto;
+  width: 90vw;
+
+  margin-top: 5vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background: rgba(195, 25, 25, 0.03); 
+  border-radius: 10px;
+
+  & span{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  & span:first-child{
+    color:  var(--marca_vermelho);
+  }
+  & p{
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @media (max-width: 700px){
+      font-size: 1.5rem;
+    }
+  }
+  & small{
+    color: var(--texto_cinza);
+    font-size: 0.9rem;
+  }
+}
+
+.rodape{
+  margin-top: 5vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background: #F9FAFB;
+
+  text-align: center;
+
+  & h3{
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  & p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--texto_cinza);
+  }
+  & small{
+    font-weight: 300;
+    color: var(--texto_cinza);
+  }
+  & form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & input{
+      font-weight: 500;
+      font-size: 1rem;
+
+      padding: 8px 16px;
+
+      border: 1px solid #D0D5DD;
+      border-radius: 8px;
+    }
+
+    & button {
+      font-weight: 500;
+      font-size: 1rem;
+
+      padding: 10px 18px;
+
+      border: none;
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      background: var(--marca_vermelho);
+      color: white;
+    }
   }
 }

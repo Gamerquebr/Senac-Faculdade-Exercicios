@@ -1,10 +1,4 @@
-//Classe
-class Personagem{
-    nome: string = ""
-    energia: number = 0
-    ataque: number = 0
-    defesa: number = 0
-}
+import { Personagem } from "./classe"
 
 let clebe: Personagem = new Personagem()
 clebe.nome = "Senhor Senhor Wilson"

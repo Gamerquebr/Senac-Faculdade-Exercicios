@@ -1,0 +1,12 @@
+veiculos;
+
+chave primária: placa
+string: Tipo do veículo
+chave secundária: chave primária do cliente
+float: Valor por hora
+
+clientes;
+chave primário: Número de celular
+String: Nome
+
+

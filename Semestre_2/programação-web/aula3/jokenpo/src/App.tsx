@@ -18,23 +18,32 @@ function App() {
     if (num == 1){
       setCpu("./pedra.png")
 
-      if (aposta == "./pedra.png") setResultado("Empatou! :|")
-      else if (aposta == "./tesoura.png") setResultado("Ganhou! :)")
-      else setResultado("Perdeu! :(")
+      if (aposta == "./pedra.png") 
+        setResultado("Empatou! :|")
+      else if (aposta == "./tesoura.png") 
+        setResultado("Ganhou! :)")
+      else 
+        setResultado("Perdeu! :(")
     }
     else if (num == 2){
       setCpu("./papel.png")
 
-      if (aposta == "./papel.png") setResultado("Empatou! :|")
-      else if (aposta == "./pedra.png") setResultado("Ganhou! :)")
-      else setResultado("Perdeu! :(")
+      if (aposta == "./papel.png") 
+        setResultado("Empatou! :|")
+      else if (aposta == "./pedra.png") 
+        setResultado("Ganhou! :)")
+      else 
+        setResultado("Perdeu! :(")
     }
     else {
       setCpu("./tesoura.png")
 
-      if (aposta == "./tesoura.png") setResultado("Empatou! :|")
-      else if (aposta == "./papel.png") setResultado("Ganhou! :)")
-      else setResultado("Perdeu! :(")
+      if (aposta == "./tesoura.png") 
+        setResultado("Empatou! :|")
+      else if (aposta == "./papel.png") 
+        setResultado("Ganhou! :)")
+      else 
+        setResultado("Perdeu! :(")
     }
   }
 

@@ -1,3 +1,200 @@
 body {
-  font-family:"Inter";
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --azul-claro: #44C6E9;
+  --azul-escuro: #2977D5;
+  --azul-muito-escuro: #00296D;
+  --preto: #252525;
+  --branco: #FFF9FD;
+  --cinza: #666666; /* cinza do demonio :o */
+
+  overflow-x: hidden; /*Faz o site voltar a funcionar em telas menores que 350px, (culpa do circulo azul maldito)*/
 }
+
+/*Basicamente transforma listas em divs com semântica :)*/
+li{
+  list-style: none outside none;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+.navbar{
+  width: 100vw;
+  height: 6.5rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0px 1px 10px 0px rgba(102, 102, 102, 0.15); 
+
+  & img{
+    width: 2rem;
+    height: auto;
+  }
+
+  & div{
+    text-align: center;
+    line-height: 2rem;
+
+    & span{
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 400; 
+
+    }
+    & small{
+      font-weight: 200;
+    }
+  }
+}
+
+.cabecalho{
+  padding: 5vw;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  overflow: hidden;
+
+  gap: 5vw;
+
+  @media (max-width: 768px){
+    flex-direction: column-reverse;
+  }
+}
+
+.cabecalho__imagem{
+  width: 50%;
+  max-width: 400px;
+
+  position: relative;
+
+  @media (max-width: 768px){
+    width: 90%;
+    min-width: 280px;
+
+  }
+
+  & img{
+    width: 100%;
+    height: auto;
+
+    border-radius: 20px;
+
+  }
+
+  /*Bola maldita, desgraçada, sem mãe, todos te odiamos círculo do inferno, TRANSLATE + AFTER + POSITION + Z-INDEX a combinação do inferno*/
+  &::after{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    box-shadow: 5px 5px 10px color-mix(in srgb, var(--cinza) 50%, white);
+
+    transform: translateX(-17%);
+
+    width: 150%;
+    height: 98%;
+
+    border-radius: 100%;
+    background: rgb(68,198,233);
+    background: linear-gradient(180deg, rgba(68,198,233,0.47521015242034315) 20%, rgba(68,198,233,1) 30%, rgba(41,119,213,1) 70%, rgba(0,41,109,1) 100%); 
+  }
+}
+
+.cabecalho__header{
+  max-width: 500px;
+  height: min-content;
+
+  > span{
+    color: var(--azul-escuro);
+    font-size: 0.8rem;
+  }
+
+  & h1{
+    color: var(--azul-muito-escuro);
+
+    font-size: 2rem;
+    line-height: 3rem;
+
+    & span{
+      color: var(--azul-claro);
+    }
+  }
+
+  & p{
+    color: var(--cinza);
+
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  & div{
+    display: inline-flex;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    width: 100%;
+    padding-top: 3vw;
+
+    & button{
+      font-size: 0.75rem;
+
+      border-radius: 12px; 
+      width: 8.2rem;
+      height: 2.5rem;
+    }
+
+    & button:first-child{
+      background: var(--azul-claro);
+
+      color: var(--branco);
+
+      border: none;
+
+      box-shadow: 3px 3px var(--azul-escuro);
+
+      transition: box-shadow 0.3s,
+                  background 0.3s;
+      
+      &:hover, :focus{
+        background: var(--azul-escuro);
+        box-shadow: none;
+      }
+    }
+    & button:last-child{
+
+      background: transparent;
+
+      color: var(--cinza);
+
+      border-color: color-mix(in srgb, var(--cinza) 75%, white);
+      border-style: solid;
+      border-width: 1px;
+
+      transition: background 0.3s,
+                  color 0.3s;
+      &:hover, :focus{
+        background: color-mix(in srgb, var(--cinza) 75%, white);
+        color: var(--branco);
+      }
+
+    }
+  }
+}
+
+
+
+
+
+

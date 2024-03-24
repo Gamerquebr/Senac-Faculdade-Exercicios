@@ -21,9 +21,9 @@ function App() {
       if (aposta == "./pedra.png") 
         setResultado("Empatou! :|")
       else if (aposta == "./tesoura.png") 
-        setResultado("Ganhou! :)")
-      else 
         setResultado("Perdeu! :(")
+      else 
+        setResultado("Ganhou! :)")
     }
     else if (num == 2){
       setCpu("./papel.png")
@@ -31,9 +31,9 @@ function App() {
       if (aposta == "./papel.png") 
         setResultado("Empatou! :|")
       else if (aposta == "./pedra.png") 
-        setResultado("Ganhou! :)")
-      else 
         setResultado("Perdeu! :(")
+      else 
+        setResultado("Ganhou! :)")
     }
     else {
       setCpu("./tesoura.png")
@@ -41,9 +41,9 @@ function App() {
       if (aposta == "./tesoura.png") 
         setResultado("Empatou! :|")
       else if (aposta == "./papel.png") 
-        setResultado("Ganhou! :)")
-      else 
         setResultado("Perdeu! :(")
+      else 
+        setResultado("Ganhou! :)")
     }
   }
 

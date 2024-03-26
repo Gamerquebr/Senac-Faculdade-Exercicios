@@ -19,6 +19,11 @@ ul{
   padding: 0;
   margin: 0;
 }
+hr{
+  border-color: var(--azul-claro);
+  border-width: 1px;
+  border-top: none;
+}
 
 .navbar{
   width: 100vw;

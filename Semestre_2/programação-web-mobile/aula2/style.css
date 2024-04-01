@@ -196,10 +196,60 @@ hr{
 
     }
   }
+
 }
 
+.info{
+  display: flex;
+  flex-wrap: wrap; 
 
+  align-items: center;
+  justify-content: space-evenly;
 
+  width: 100vw;
 
+  gap: 2vw;
+
+  & li{
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    gap: 2vw;
+
+  }
+
+  & h4{
+    font-weight: 300;
+    font-size: 1.1rem;
+
+  }
+
+  & span{
+    color: var(--cinza);
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+
+  @media(max-width: 500px){
+    & li{
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+
+      justify-content: space-around;
+    }
+
+    & h4{
+      width: 33vw;
+    }
+
+    & span{
+      width: 33vw;
+    }
+  }
+}
 
 

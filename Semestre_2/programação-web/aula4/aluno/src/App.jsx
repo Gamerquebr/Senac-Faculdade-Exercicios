@@ -13,7 +13,7 @@ function App() {
   function handleChange(e){
     const id = e.target.id
     const value = e.target.value
-    
+
     setValues({
       ...values,
       [id]: value
@@ -24,7 +24,7 @@ function App() {
 
   function calculateAvarage(e){
     e.preventDefault()
-    
+
     const nome = values.nome == '' ? "Aluno" : values.nome
 
     const nota1 = evaluateGrade(Number(values.nota1))

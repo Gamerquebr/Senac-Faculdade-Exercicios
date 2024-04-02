@@ -38,22 +38,22 @@ hr{
 
   box-shadow: 0px 1px 10px 0px rgba(102, 102, 102, 0.15); 
 
-  > img{
+  & img{
     width: 2rem;
     height: auto;
   }
 
-  > div{
+  & div{
     text-align: center;
     line-height: 2rem;
 
-    > span{
+    & span{
       text-transform: uppercase;
       font-size: 1rem;
       font-weight: 400; 
 
     }
-    > small{
+    & small{
       font-weight: 200;
     }
   }
@@ -87,7 +87,7 @@ hr{
 
   }
 
-  > img{
+  & img{
     width: 100%;
     height: auto;
 
@@ -127,25 +127,25 @@ hr{
     font-size: 0.8rem;
   }
 
-  > h1{
+  & h1{
     color: var(--azul-muito-escuro);
 
     font-size: 2rem;
     line-height: 3rem;
 
-    > span{
+    & span{
       color: var(--azul-claro);
     }
   }
 
-  > p{
+  & p{
     color: var(--cinza);
 
     font-size: 0.8rem;
     font-weight: 300;
   }
 
-  > div{
+  & div{
     display: inline-flex;
 
     justify-content: space-between;
@@ -155,7 +155,7 @@ hr{
     width: 100%;
     padding-top: 3vw;
 
-    > button{
+    & button{
       font-size: 0.75rem;
 
       border-radius: 12px; 
@@ -163,7 +163,7 @@ hr{
       height: 2.5rem;
     }
 
-    > button:first-child{
+    & button:first-child{
       background: var(--azul-claro);
 
       color: var(--branco);
@@ -180,7 +180,7 @@ hr{
         box-shadow: none;
       }
     }
-    > button:last-child{
+    & button:last-child{
 
       background: transparent;
 
@@ -191,7 +191,7 @@ hr{
       border-width: 1px;
 
       transition: background 0.3s,
-                 color 0.3s;
+                  color 0.3s;
       &:hover, :focus{
         background: color-mix(in srgb, var(--cinza) 75%, white);
         color: var(--branco);
@@ -214,7 +214,7 @@ hr{
 
   gap: 2vw;
 
-  > li{
+  & li{
     display: flex;
     align-items: center;
 
@@ -238,7 +238,7 @@ hr{
   }
 
   @media(max-width: 500px){
-    > li{
+    & li{
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
@@ -252,8 +252,6 @@ hr{
 
     & span{
       width: 33vw;
-      line-break: anywhere;
-
     }
   }
 }
@@ -261,11 +259,11 @@ hr{
 #servicos{
   padding: 5vw;
 
-  > small{
+  & small{
     color: var(--azul-escuro);
     font-size: 0.8rem;
   }
-  > h2{
+  & h2{
     color: var(--azul-muito-escuro) ;
     font-size: 2rem;
     text-shadow: 5px 5px 0px #D4E4F4;
@@ -274,7 +272,8 @@ hr{
 
 #servicos__cards{
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   width: 100%;
 
@@ -283,73 +282,14 @@ hr{
 
   gap: 5vw;
 
-  > li{
+  & li{
     width: 300px;
     padding: 15px;
 
-    border-radius: 10px;
+    border: 2px solid black;
 
-    box-shadow: 0px 0px 8px 1px #D4E4F4;
-  }
-
-  & h3{
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--azul-escuro)
-  }
-
-  & p{
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--cinza);
-  }
-
-  & a{
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 300;
-    color: var(--azul-claro);
-
-    > img{
-      translate: 10px 4px; 
-    }    
-
-    &:hover, :focus{
-      text-decoration: underline;
-    }
+    box-shadow: 0px 0px 10px 10px black;
+    
   }
 }
-
-#reviews{
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-  padding: 5vw;
-
-  > span{
-    color: var(--azul-escuro);
-    font-size: 0.8rem;
-  }
-  > h2{
-    text-align: center;
-    color: var(--azul-muito-escuro) ;
-    font-size: 2rem;
-    text-shadow: 5px 5px 0px #D4E4F4;
-  }
-   
-}
-#reviews__cards{
-  width: 300px;
-  padding: 15px;
-
-  border-radius: 10px;
-
-  box-shadow: 0px 0px 8px 1px #D4E4F4;
-  
-
-}
-
-
 

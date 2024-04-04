@@ -17,19 +17,19 @@ export class Cachorro {
         this.nome = nome;
         this.porte = 'indefinido';
         this.pedigree = false;
-        this.energia = (Math.floor( Math.random() * 99));
+        this.energia = (Math.floor(Math.random() * 99));
         this.peso = Math.random() * 1;
         this.dataNascimento = new Date();
         this.felicidade = Math.floor(1 + Math.random() * 99);    
         this.adestrado = false;
-        
+
     }
     comer(): void {
         this.peso *= 1.1
         this.felicidade += parseInt(""+1+ Math.random() * 9);
         this.energia -= parseInt(""+10+ Math.random() * 10);
         this.validaStatus(this);
-     
+
     }
     latir(numeroDeVezes: number): string {
         this.felicidade -= parseInt(""+1+ Math.random() * 2)*numeroDeVezes;
@@ -41,7 +41,7 @@ export class Cachorro {
         this.energia += Util.randomizar(1,10)*tempoEmHoras;
         this.felicidade += Util.randomizar(1,3)*tempoEmHoras;
         this.validaStatus(this);
-        
+
     }
     brincar(tempoEmMinutos: number): void {
         this.energia -= Util.randomizar(1,4)*tempoEmMinutos;
@@ -62,6 +62,5 @@ export class Cachorro {
             cachorro.felicidade = 100;
         }
     }
-    
 
 }

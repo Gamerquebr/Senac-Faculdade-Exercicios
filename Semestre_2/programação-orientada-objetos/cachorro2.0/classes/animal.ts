@@ -48,26 +48,32 @@ export abstract class Animal{
     }
 
     protected validarStatus(): void{
-        if (this.energia > 100)
-            throw new Error(`${this.nome} recebeu tanta energia que entrou em
-                             estado de choque e explodiu`)
+        if (this.energia > 120)
+            throw new Error(
+            `${this.nome} recebeu tanta energia que entrou em estado de choque e explodiu`
+        )
         else if(this.energia <= 0)
-            throw new Error(`${this.nome} ficou sem energia, foi dormir e não
-                             acordou mais`)
+            throw new Error(
+            `${this.nome} ficou sem energia, foi dormir e não acordou mais`
+        )
 
-        else if (this.felicidade > 100)
-            throw new Error(`${this.nome} ficou tão feliz que teve uma overdose
-                             e morreu`)
+        else if (this.felicidade > 120)
+            throw new Error(
+            `${this.nome} ficou tão feliz que teve uma overdose e morreu`
+        )
         else if(this.felicidade <= 0)
-            throw new Error(`${this.nome} ficou tão triste que entrou em depressão
-                             e se matou`)
+            throw new Error(
+            `${this.nome} ficou tão triste que entrou em depressão e se matou`
+        )
 
         else if (this.peso >= this.pesoInicial * 3)
-            throw new Error(`${this.nome} ficou tão pesado que entrou em obesidade
-                             mórbida, teve um ataque cardíaco ao se levantar e morreu`)
-        else if(this.energia <= this.pesoInicial / 3)
-            throw new Error(`${this.nome} ficou tão magro que um dia sumiu para nunca
-                             mais ser encontrado`)
+            throw new Error(
+            `${this.nome} ficou tão pesado que entrou em obesidade mórbida, teve um ataque cardíaco ao se levantar e morreu`
+        )
+        else if(this.peso <= this.pesoInicial / 3)
+            throw new Error(
+            `${this.nome} ficou tão magro que um dia sumiu para nunca mais ser encontrado`
+        )
 
         else return
     }

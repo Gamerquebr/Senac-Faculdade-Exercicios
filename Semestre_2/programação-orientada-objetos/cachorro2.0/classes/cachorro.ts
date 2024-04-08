@@ -16,7 +16,7 @@ export class Cachorro extends Animal{
         const peso: number = this.pesoInicial
 
         switch(true){
-            case peso < 5:
+            case peso >= 1 && peso < 5:
                 return 'Mini'
             case peso >= 5 && peso < 10:
                 return 'Pequeno'
@@ -41,16 +41,19 @@ export class Cachorro extends Animal{
         if (latidos == undefined || latidos <= 0)
             latidos = 1
 
-        this.felicidade += helper.randomNum(0, 2) * this.natureza
-        this.energia += helper.randomNum(0, 2) * this.natureza
+        for(let i: number = 0; i < latidos; i++){
 
-        this.peso -= this.pesoInicial * 0.025
+            this.felicidade += helper.randomNum(0, 2) * this.natureza
+            this.energia += helper.randomNum(0, 2) * this.natureza
 
-        this.validarStatus()
+            this.peso -= this.pesoInicial * 0.025
+
+            this.validarStatus()
+        }
 
         return 'au'.repeat(latidos)
     }
-    public dormir(HorasBrincadas?: number): void{
+    public brincar(HorasBrincadas?: number): void{
         if (HorasBrincadas == undefined || HorasBrincadas <= 0) 
             return
 

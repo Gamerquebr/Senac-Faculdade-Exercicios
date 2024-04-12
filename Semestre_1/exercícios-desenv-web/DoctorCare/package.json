@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  },
+  "name": "doctorcare",
+  "version": "1.0.0",
+  "main": "./src/index.html",
+  "scripts": {
+    "t": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "author": "Marcel1n",
+  "license": "ISC",
+  "description": "Um site responsivo utilizando-se apenas de tailwindcss"
+}

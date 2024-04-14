@@ -1,4 +1,4 @@
-import { Quadra } from "./classes/classes"
+import { Quadra } from "./classes/quadra"
 import { Reserva } from "./classes/reserva";
 
 import Prompt from "prompt-sync";

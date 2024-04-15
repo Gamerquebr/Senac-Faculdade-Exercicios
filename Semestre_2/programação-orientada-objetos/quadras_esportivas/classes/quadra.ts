@@ -2,24 +2,39 @@ import { Reserva } from "./reserva"
 
 
 export class Quadra {
-    public id: number
+    public readonly id: number
     public esporte: string
-    public disponibilidade: boolean
+    private disponibilidade: string[]
+    public apelido: string | undefined
 
-    constructor(id: number, esporte: string){
+    constructor(id: number, esporte: string, disponibilidade: string[2], apelido?: string){
         this.id = id
         this.esporte = esporte
-        this.disponibilidade = true
+        this.disponibilidade = this.popularDisponibilidade(disponibilidade) 
+        this.apelido = apelido
     }
 
-    public reservar(nome: string): Reserva{
-        if (!this.disponibilidade)
-            throw new Error("Essa quadra já foi reservada! :(")
-            
-        let reserva: Reserva = new Reserva(nome, this.id)
-        this.disponibilidade = false
+    private popularDisponibilidade(disponibilidade: string[2]): string[]{
+        const horarios: string[] = []
+        const inicio: string[] = disponibilidade[0].split(':')
+        const fim: string[] = disponibilidade[1].split(':')
 
-        return reserva
+        return horarios
+
+    }
+
+    private helper(str: string): number[]{
+        let arr:string[] = str.split(':') 
+
+
+    }
+
+    public obterDisponibilidade(): string[]{
+        return []
+    }
+
+    public reservar(): Reserva{
+        return new Reserva()
     }
 
 

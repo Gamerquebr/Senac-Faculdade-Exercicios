@@ -1,14 +1,14 @@
 export class Reserva {
-    public idQuadra: number;
-    public data: string;
+    public readonly idQuadra: number;
+    public readonly idMembro: number;
+    public readonly horario: string[2];
+    public readonly data: string;
 
-    //tmp
-    public nome: string;
-
-    constructor(nome: string, id: number) {
-        this.nome = nome;
+    constructor(idMembro: number, idQuadra: number, horario: string[2]) {
+        this.idQuadra = idQuadra;
+        this.idMembro = idMembro;
+        this.horario = horario;
         this.data = Date();
-        this.idQuadra = id;
     }
 
 }

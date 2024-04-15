@@ -24,12 +24,6 @@ Essa classe registra uma reserva, é preciso que cada reserva durante a criaçã
 tenha o *id* de quem a fez, *id* da quadra que vai ser reservada e qual o horário 
 que ela será reservada (exemplo: das 17:00 até 20:30)
 
-- id:
-
-O `id` é responsável por identificar a reserva, **sempre** será único
-e **não** pode ser substituído e nem mesmo modificado, é automaticamente selecionado
-na criação da classe
-
 - idMembro:
 
 Deve ser passado como parâmetro na criação da classe, é usado para identificar
@@ -53,6 +47,8 @@ brasileiro dia/mês/ano) que a Reserva foi criada
 
 ## Quadra
 
+### atributos
+
 Essa classe representa uma quadra de esportes
 
 - id:
@@ -60,6 +56,10 @@ Essa classe representa uma quadra de esportes
 O `id` é responsável por identificar a reserva, **sempre** será único
 e **não** pode ser substituído e nem mesmo modificado, é automaticamente selecionado
 na criação da classe
+
+- esporte:
+
+O esporte representa para qual esporte a quadra será, deve ser passado como parâmetro na criação da classe
 
 - apelido:
 
@@ -72,7 +72,45 @@ São os horários disponíveis, deve ser passado como parâmetro na criação de
 formato de array [primeira hora disponível, última hora disponível] (exemplo [11:00, 17:30]),
 os valores devem estar em ordem correta
 
+`disponibilidade` é um atributo privado, para acessa-lo deve usar o método `obterDisponibilidade`
+
+- alugados
+
+Essa array contém todos os horários já alugados, para popula-la deve-se usar o método `alugarQuadra` 
+
+### métodos
+
+- alugarQuadra
+
+Esse método retorna uma `Reserva` e é usado para reservar a quadra por um determinado tempo
+
+Esse método necessita como parâmetro o `id` do membro e o intervalo de tempo que ele deseja reservar a quadra
+ex: [14:30, 17:00], é **essencial** que o intervalo seja no mínimo de 30 minuto, não podendo ser números 
+quebrados como "12:37" ou "12:54", **somente** "12:00" ou "12:30"
+
+esse método também popula o atributo `alugados` com os respectivos horários alugados
+
+- popularDisponibilidade
+
+É um método privado que auxilîa na criação do atributo `disponibilidade`, gerando uma array com todos os horários
+disponíveis
+
+ele recebe o **parâmetro** *disponibilidade* (o par de horários)
+
+ex: se for passado [12:00, 14:30] para o `polularDisponibilidade`, será retornado [12:00, 12:30, 13:00, 13:30, 14:00, 14:30] 
+
+- obterDisponibilidade
+
+Esse método retorna o valor do atributo `disponibilidade`
+
+recebe opcionalmente *n* número de parâmetros, esses parâmetros são arrays com um par de valores
+[horarioInicial, horarioFinal], esses valores são usados para "filtrar" o atributo `disponibilidade`
+
+ex: foram passados 3 parâmetros para o método: ([12:00, 14:30], [15:00, 16:00], [10:30, 11:00])
+todos os horários entre esses valores não serão retornados por `obterDisponibilidade`
+
 # TODO:
+
 
 ## Uma classe Quadra precisa:
 

@@ -9,6 +9,8 @@ export class Quadra {
 
     private disponibilidade: number[][]
 
+    public horariosReservados: number[][]
+
     constructor(id: number, esporte: string, disponibilidade: string[], apelido?: string){
         this.id = id
 
@@ -16,6 +18,8 @@ export class Quadra {
         this.apelido = apelido
 
         this.disponibilidade = this.popularDisponibilidade(disponibilidade) 
+
+        this.horariosReservados = []
     }
 
 
@@ -25,13 +29,10 @@ export class Quadra {
         return arr.map((num) => parseInt(num))
     }
 
+    //TODO
     private validarHoras(str: string[]){
         str
         return
-    }
-
-    private compararArrays(){
-
     }
 
     private popularDisponibilidade(disponibilidade: string[]): number[][]{
@@ -47,7 +48,7 @@ export class Quadra {
 
             horarios.push([i, 0])
             horarios.push([i, 30])
-            
+
         }
 
         if (inicio[1] == 30){
@@ -70,7 +71,7 @@ export class Quadra {
         para 
         [[ [12, 30], [14, 0] ], [ [17, 0], [19, 30]]*/
         const intervalos: number[][][] = argv.map((intervalo) => {
-            
+
             this.validarHoras(intervalo)
 
             const inicio: number[] = this.pegarHoras(intervalo[0])
@@ -78,7 +79,6 @@ export class Quadra {
 
             return [inicio, fim]
         })
-
         const disponibilidade: number[][] = this.disponibilidade
 
         intervalos.forEach((intervalo) => {
@@ -90,7 +90,7 @@ export class Quadra {
 
                 if (horario.toString() === intervalo[0].toString()){
 
-                    inicio = index      
+                    inicio = index
                 }
                 else if(horario.toString() === intervalo[1].toString()){
 
@@ -105,10 +105,10 @@ export class Quadra {
         return disponibilidade
     }
 
-    public reservar(): Reserva{
-        return new Reserva(0,0,"")
+    public reservar(idMembro: number, horario: string[]): Reserva{
+
+        this.horariosReservados.push(...this.popularDisponibilidade(horario))
+
+        return new Reserva(idMembro, this.id, horario)
     }
-
-
-
 }

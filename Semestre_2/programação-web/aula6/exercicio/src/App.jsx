@@ -38,7 +38,7 @@ function App() {
                 <div>
                     <p className='subtitulo'><strong>Escolha o modelo</strong></p>
                     <p>
-                        <input type="radio" name="modelo" id="tubarao" 
+                        <iput type="radio" name="modelo" id="tubarao" 
                         value="tubarao.webp"
                         {...register("foto")}
                         />

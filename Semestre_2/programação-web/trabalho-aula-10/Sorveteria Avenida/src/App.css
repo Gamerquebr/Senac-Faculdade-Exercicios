@@ -1,0 +1,57 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+}
+
+header {
+    background-color: coral;
+    display: flex;
+    align-items: center;
+
+    color:white;
+
+    > img {
+        width: 10%;
+        min-width: 100px;
+    }
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+
+    & p {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+main {
+
+    > h2 {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    > div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    & span{
+        font-size: xx-large;
+        font-weight: 900;
+    }
+
+    & img {
+        width: 200px;
+        border-radius: 10px;
+    }
+}

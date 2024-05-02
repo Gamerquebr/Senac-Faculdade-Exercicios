@@ -20,7 +20,7 @@ export class Cachorro {
         this.energia = (Math.floor(Math.random() * 99));
         this.peso = Math.random() * 1;
         this.dataNascimento = new Date();
-        this.felicidade = Math.floor(1 + Math.random() * 99);    
+        this.felicidade = Math.floor(1 + Math.random() * 99);
         this.adestrado = false;
 
     }

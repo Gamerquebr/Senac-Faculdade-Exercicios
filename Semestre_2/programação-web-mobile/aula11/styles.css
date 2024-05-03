@@ -1,0 +1,141 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --preto: #000;
+    --branco: #fff;
+    --cinza-fundo: #f1f1f1;
+    --vermelho-titulo: #8d0606;
+    --cinza-texto: #8c8888;
+    --cinza-rodape: #c4c4c4;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em;
+}
+.logo {
+}
+
+
+.menu {
+}
+.menu__lista {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+}
+.menu__lista a{
+    text-decoration: none;
+    color: var(--cinza-texto)
+}
+
+
+.banner {
+    background-image: url(./src/background.jfif);
+    background-size:contain;
+    height: 51.25em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_titulo {
+    color: var(--branco);
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.75);
+    font-family: Pacifico;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+
+.titulo {
+    color: var(--vermelho-titulo);
+    text-align: center;
+    font-family: Pacifico;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.texto {
+    color: var(--cinza-texto);
+    text-align: center;
+    font-family: reboto;
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+
+.receitas__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    background-color: var(--cinza-fundo);
+    padding: 3em;
+    gap: 2em;
+
+    justify-items: center;
+}
+.receitas__card {
+    height: 24rem;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: var(--branco);
+    gap: 1em;
+    border-radius: 5px;
+    border: 1px solid var(--cinza-rodape)
+}
+
+.receitas__card img{
+    width: 100%;
+}
+
+
+.card__titulo {
+    color: var(--preto);
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.card__texto {
+    color: var(--preto);
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.card__botao {
+    border-radius: 5px;
+    background: var(--vermelho-titulo);
+    color: var(--branco);
+    padding: 0.5em;
+    border: none;
+}
+
+
+.quemsomos__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.quemsomos__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem
+}
+.quemsomos__titulo {
+}
+.quemsomos__texto {
+}
+
+
+.rodape {
+}
+.rodape-texto {
+}

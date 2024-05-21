@@ -61,12 +61,12 @@ describe("Testando a função calcularPrecoComDesconto", () => {
         expect(desconto).toBe(100)
     })
     test("Retorna o valor com 25% de desconto 250", () => {
-        const desconto = produto.calcularPrecoComDesconto(10)
-        expect(desconto).toBe(100)
+        const desconto = produto.calcularPrecoComDesconto(25)
+        expect(desconto).toBe(250)
     })
     test("Retorna o valor com 50% de desconto 500", () => {
-        const desconto = produto.calcularPrecoComDesconto(10)
-        expect(desconto).toBe(100)
+        const desconto = produto.calcularPrecoComDesconto(50)
+        expect(desconto).toBe(500)
     })
 })
 

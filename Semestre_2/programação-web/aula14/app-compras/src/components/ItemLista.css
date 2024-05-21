@@ -1,0 +1,16 @@
+h6 {
+  max-width: 340px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: -46px;
+  padding: 5px;
+}
+
+h6:nth-child(odd) {
+  background-color: lightcyan;
+}
+
+h6:nth-child(even) {
+  background-color: greenyellow;
+}

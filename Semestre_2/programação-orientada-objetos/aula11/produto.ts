@@ -20,7 +20,7 @@ export default class Produto {
     public getEstoque = () => this._estoque
 
     public calcularPrecoComDesconto(porcentagemDeDesconto: number): number{
-        if (porcentagemDeDesconto <= 0) throw Error("Tu tem problema?")
+        if (porcentagemDeDesconto <= 0) throw Error("não tem como dividir por zero!")
         else if (porcentagemDeDesconto >= 100) return 0
 
         const porcentagem = porcentagemDeDesconto / 100

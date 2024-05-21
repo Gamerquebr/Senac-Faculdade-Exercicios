@@ -1,0 +1,15 @@
+label {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: 90px;
+}
+
+input {
+  padding: 5px;
+  font-size: 14px;  
+}
+
+h3.lista {
+  margin-bottom: 50px;
+}

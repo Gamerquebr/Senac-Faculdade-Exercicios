@@ -2,26 +2,20 @@ import { Util } from "./Util";
 
 export class Cachorro {
 
-    raca: string;
+    tipo: string;
     nome: string;
     porte: string;
-    pedigree: boolean;
     peso: number;
-    dataNascimento: Date;
     energia: number;
     felicidade: number;
-    adestrado: boolean;
 
     constructor(nome: string) {
-        this.raca = 'indefinido';
+        this.tipo = 'indefinido';
         this.nome = nome;
         this.porte = 'indefinido';
-        this.pedigree = false;
         this.energia = (Math.floor(Math.random() * 99));
         this.peso = Math.random() * 1;
-        this.dataNascimento = new Date();
         this.felicidade = Math.floor(1 + Math.random() * 99);
-        this.adestrado = false;
 
     }
     comer(): void {

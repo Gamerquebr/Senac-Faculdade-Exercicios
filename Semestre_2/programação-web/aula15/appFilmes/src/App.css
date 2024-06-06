@@ -13,3 +13,12 @@
   padding: 10px;
 }
 
+.lista-novo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bt-novo{
+    margin: 10px;
+    font-size: 16px;
+}

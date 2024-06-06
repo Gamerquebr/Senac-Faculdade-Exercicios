@@ -1,31 +1,29 @@
 [
-    {
-        "titulo": "metralhadora man",
-        "genero": "metralhadora",
-        "duracao": 120,
-        "foto": "https://www.cineflix.com.br/wp-content/uploads/2024/02/amigos-imaginarios-482x708.jpg",
-        "sinopse": "Um homem descobre que é o metralhadora man e agora as inimigas ele vai matar, tra tra tra,  TRA TRA TRA TRA, curioso? assista.",
-        "nota": 0,
-        "comentario": ""
-    },
-    {
-        "titulo": "A mulher que não morreu",
-        "genero": "feminista racista mototaxista",
-        "duracao": 169,
-        "foto": "https://www.cineflix.com.br/wp-content/uploads/2024/02/amigos-imaginarios-482x708.jpg",
-        "sinopse": "Uma mulher descobre que é parente de uma parede drywall, após se descobrir muito GATA, joga minecraft com os manos e é feliz, porém entra no discord.",
-        "nota": 3.5,
-        "comentario": "Mesopotanica, babilonica, lacronica"
-    },
-    {
-        "titulo": "joao deu e recebeu",
-        "genero": "vingança lgbt",
-        "duracao": 120,
-        "foto": "https://www.cineflix.com.br/wp-content/uploads/2024/02/amigos-imaginarios-482x708.jpg",
-        "sinopse": "João descobre que um dos seus ancestrais já foi um mamaco, em choque ele decide comer um mamaco mulher e ver noq dá (pegou aids)",
-        "nota": 5.0,
-        "comentario": "absolute cinema"
-    }
+  {
+    "titulo": "Amigos Imaginários",
+    "genero": "Comédia",
+    "duracao": 108,
+    "foto": "https://www.cineflix.com.br/wp-content/uploads/2024/02/amigos-imaginarios-482x708.jpg",
+    "sinopse": "Uma garota descobre que consegue ver os amigos imaginários de todas as pessoas, mesmo aqueles esquecidos por crianças que já cresceram.",
+    "nota": 0,
+    "comentario": "" 
+  },
+  {
+    "titulo": "Garfield: Fora de Casa",
+    "genero": "Animação",
+    "duracao": 102,
+    "foto": "https://www.cineflix.com.br/wp-content/uploads/2024/04/Garfield-foradecasa-472x708.jpg",
+    "sinopse": "Garfield tem uma aventura selvagem com seu pai perdido, Vic, e seu amigo Odie, em um assalto hilariante e arriscado.",
+    "nota": 4.5,
+    "comentario": "Bom para ver com as crianças. Gostei" 
+  },
+  {
+    "titulo": "Planeta dos Macacos",
+    "genero": "Ação",
+    "duracao": 138,
+    "foto": "https://www.cineflix.com.br/wp-content/uploads/2024/02/planeta-dos-macacos-o-reinado-482x708.jpg",
+    "sinopse": "Várias gerações após o reinado de César, os macacos são a espécie dominante, vivendo harmoniosamente, e os humanos foram reduzidos a viver nas sombras.",
+    "nota": 4.0,
+    "comentario": "História tradicional, porém, com muita ação!" 
+  }
 ]
-
-

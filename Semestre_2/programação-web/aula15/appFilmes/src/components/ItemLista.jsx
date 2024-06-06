@@ -2,8 +2,29 @@ import "./ItemLista.css"
 import Estrelas from "./Estrelas"
 import { MdOutlineStarPurple500 as EstrelaCheia} from "react-icons/md";
 
-export default function ItemLista({filme}) {
+import { toast } from "sonner";
 
+export default function ItemLista({filme, filmes, setFilmes}) {
+
+    function avaliaFilme(){
+        const nota = Number(prompt(`Nota do Filme ${filme.titulo}: `))
+        if (nota < 0 || nota > 5 || (nota * 10) % 5 != 0){
+            alert("Nota inválida")
+            return
+        }
+        const comentario = prompt("comentario da avaliação")
+
+        const filmes2 = [...filmes]
+        const indice = filmes2.findIndex(x => x.titulo == filme.titulo)
+
+        filmes2[indice].nota = nota
+        filmes2[indice].comentario = comentario
+
+        setFilmes(filmes2)
+
+        localStorage.setItem("filmes", JSON.stringify(filmes2))
+        toast.warning("Ok! Filme Avaliado com Sucesso")
+    }
 
     return(
         <div className="grid-item">
@@ -16,7 +37,7 @@ export default function ItemLista({filme}) {
                 {filme.nota <= 0 ?
                     <div>
                         <img src="./novidade.jpg"  alt="Novidade" className="novidade"/>
-                        <p><button>Avaliar <EstrelaCheia/></button></p>
+                        <p><button onClick={avaliaFilme}>Avaliar <EstrelaCheia/></button></p>
                     </div> :
                     <>
                         <div>

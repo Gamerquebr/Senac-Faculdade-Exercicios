@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply flex flex-col items-center gap-4
+}
+.card__container{
+    @apply flex items-center gap-4
+}

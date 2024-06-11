@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lista__titulo{
+    font-size: 50px;
+    text-align: center;
+}
+
+.lista__adicionar{
+    font-size: 25px;
+    margin-left: 85%;
+    background-color: green;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lista__container{
+    display: grid;
+}

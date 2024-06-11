@@ -7,13 +7,13 @@ export default function Estrelas({nota}){
 
     for (let i = 0; i < 5; i++){      
         if (nota >= 1){
-            ListaEstrelas.push(<EstrelaCheia key={nota}/>)
+            ListaEstrelas.push(<EstrelaCheia key={i}/>)
         }
         else if (nota < 1 && nota > 0){
-            ListaEstrelas.push(<EstrelaMetade key={nota}/>)
+            ListaEstrelas.push(<EstrelaMetade key={i}/>)
         }
         else {
-            ListaEstrelas.push(<EstrelaVazia key={nota}/>)
+            ListaEstrelas.push(<EstrelaVazia key={i}/>)
         }
 
         nota--;

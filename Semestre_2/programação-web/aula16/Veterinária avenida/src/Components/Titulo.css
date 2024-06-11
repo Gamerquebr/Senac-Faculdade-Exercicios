@@ -1,0 +1,14 @@
+.header-container{
+    background-color: greenyellow;
+    display: flex;
+}
+
+.logo{
+    padding: 10px;
+    width: 80px;
+    float: left;
+}
+
+.titulo, .subtitulo{
+    color: gray
+}

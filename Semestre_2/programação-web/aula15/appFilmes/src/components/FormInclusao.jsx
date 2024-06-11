@@ -15,7 +15,7 @@ export default function FormInclusao({filmes, setFilmes}) {
         genero: dados.genero, 
         duracao: dados.duracao,
         foto: dados.foto,
-        sinsope: dados.sinopse,
+        sinopse: dados.sinopse,
         nota: 0,
         comentario: ''
     })

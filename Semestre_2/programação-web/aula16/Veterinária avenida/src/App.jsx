@@ -6,7 +6,7 @@ const [animais, setAnimais] = useState([])
 useEffect(() => {
     const listaAnimais = JSON.parse(localStorage.getItem("animais"))
     setAnimais(listaAnimais)
-}, [])
+}, []              1)
 
 
 function App() {

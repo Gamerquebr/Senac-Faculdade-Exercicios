@@ -128,9 +128,8 @@ SELECT nome, preco
 FROM produto 
 ORDER BY preco DESC;
 
-
 /* 09. Encontrar o cliente que mais gastou em compras */
-select venda.nr, itemvenda.quantidade, cliente.nome, produto.nome, produto.preco
+select venda.nr, itemvenda.quantidade, cliente.nome, produto.nome, MAX(SUM(produto.preco))
 from venda
 join cliente on venda.cliente_id = cliente.id
 join itemvenda on venda.nr = itemvenda.venda_nr

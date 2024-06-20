@@ -8,28 +8,21 @@
  *
  * @param {string} campo - O campo do objeto
  * @param {*} valor - O valor que deseja ser encontrado dentro da tabela
- * @param {object[] | string} instancia - A tabela ou a chave da tabela no localStorage
+ * @param {string} chave - A chave da tabela no localStorage
+ * @param {boolean} [unico] - Se for true, retorna somente 1 objeto e não uma array
  *
- * @returns {object[]}
+ * @returns {object[] | object}
  */
-export function encontrarPor(campo, valor, instancia) {
+export function encontrarPor(campo, valor, chave, unico = false) {
     const objetosComOValor = []
 
-    /** @type{object[]}*/
-    let tabela = []
-
-    //Se for uma string, puxa a tabela do localStorage
-    if (typeof instancia === "string"){
-        const localItem = localStorage.getItem(instancia)
-        if (localItem == ""){
-            return []
-        }
-
-        tabela = JSON.parse(localItem)
+    const localItem = localStorage.getItem(chave)
+    if (localItem == ""){
+        return []
     }
-    //Se for um objeto[], não faz nada, só atribui a variável tabela
-    else tabela = instancia
 
+    /** @type{object[]} */
+    const tabela = JSON.parse(localItem)
 
     tabela.forEach((objeto) => {
         if (objeto[campo] == valor) {
@@ -37,7 +30,16 @@ export function encontrarPor(campo, valor, instancia) {
         }
     })
 
-    return objetosComOValor
+    if (unico){
+        if (objetosComOValor.length > 0)
+            return objetosComOValor[0]
+        else 
+            return {}
+    }
+    else {
+        return objetosComOValor
+    }
+
 }
 
 /** 

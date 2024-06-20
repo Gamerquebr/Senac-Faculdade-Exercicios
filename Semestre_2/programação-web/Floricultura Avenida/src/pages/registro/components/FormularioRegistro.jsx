@@ -1,17 +1,35 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { criarMembro } from "../../../helpers";
+import { addToLocalStorage, encontrarPor } from "../../../helpers/helpers";
 
 
 export default function FormularioRegistro(){
     const {handleSubmit, register} = useForm()
 
+    /**
+     * @param {{nome: string, senha: string, confsenha: string}} data
+     */
     function registrar(data){
         if(data.senha != data.confsenha){
-            return toast.error("Senhas não são iguais!")
+            toast.error("Senhas não são iguais!")
+            return 
+        }
+        if(encontrarPor("nome", data.nome, "membros").length > 0){
+            toast.error("Esse nome já existe")
+            return
         }
 
+        /** @type membro*/
+        const membro = {
+            id: crypto.randomUUID(),
+            nome: data.nome,
+            senha: data.senha,
+            admin: false
+        }
+
+        addToLocalStorage("membros", membro)
+        toast.success("Registro feito!")
     }
 
     return (

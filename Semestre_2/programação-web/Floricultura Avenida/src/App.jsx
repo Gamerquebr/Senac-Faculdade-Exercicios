@@ -5,33 +5,32 @@ import Registro from './pages/registro/Registro'
 
 import './App.css'
 
-import { criarMembro } from './helpers/helpers' 
-import { criarFlor } from './helpers/helpers'
-
 import './helpers/typedef'
 
-if(localStorage.getItem("membros") == null){
+if (localStorage.getItem("membros") == ""){
 
-    const id = crypto.randomUUID()
-    let nome = "admin"
-    const senha = "admin"
-    const admin = false
-    
-    const adminObjeto = criarMembro(id, nome, senha, admin)
+    /** @type membro */
+    const adminObjeto = {
+        id: crypto.randomUUID(),
+        nome: "admin",
+        senha: "admin",
+        admin: true
+    } 
 
-    localStorage.setItem("membros", [adminObjeto].toString())
+    localStorage.setItem("membros", JSON.stringify([adminObjeto]))
 }
-if(localStorage.getItem("flores") == null){
+if (localStorage.getItem("flores") == ""){
 
-    const id = crypto.randomUUID()
-    const nome = "cinerária"
-    const valor = 12.50
-    const florImg = "TO-DO"
-    const idReservado = ""
+    /** @type flor */
+    const florObjeto = {
+        id: crypto.randomUUID(),
+        nome: "cinerária",
+        valor: 12.50,
+        florImg: "",
+        idReservado: ""
+    }
 
-    const florObjeto = criarFlor(id, nome, valor, florImg, idReservado)
-
-    localStorage.setItem("flores", [florObjeto].toString())
+    localStorage.setItem("flores", JSON.stringify([florObjeto]))
 }
 
 import {

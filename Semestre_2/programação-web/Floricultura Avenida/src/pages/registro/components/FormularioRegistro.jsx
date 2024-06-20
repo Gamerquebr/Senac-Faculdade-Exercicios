@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { addToLocalStorage, encontrarPor } from "../../../helpers/helpers";
@@ -6,6 +6,7 @@ import { addToLocalStorage, encontrarPor } from "../../../helpers/helpers";
 
 export default function FormularioRegistro(){
     const {handleSubmit, register} = useForm()
+    const navegador = useNavigate()
 
     /**
      * @param {{nome: string, senha: string, confsenha: string}} data
@@ -29,7 +30,9 @@ export default function FormularioRegistro(){
         }
 
         addToLocalStorage("membros", membro)
+
         toast.success("Registro feito!")
+        navegador("/login")
     }
 
     return (

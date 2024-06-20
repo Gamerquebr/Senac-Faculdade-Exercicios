@@ -17,7 +17,7 @@ export function encontrarPor(campo, valor, chave, unico = false) {
     const objetosComOValor = []
 
     const localItem = localStorage.getItem(chave)
-    if (localItem == ""){
+    if (localItem == "" || localItem == null){
         return []
     }
 
@@ -31,7 +31,7 @@ export function encontrarPor(campo, valor, chave, unico = false) {
     })
 
     if (unico){
-        if (objetosComOValor.length > 0)
+        if (Object.keys(objetosComOValor).length > 0)
             return objetosComOValor[0]
         else 
             return {}
@@ -59,7 +59,7 @@ export function encontrarPor(campo, valor, chave, unico = false) {
 export function addToLocalStorage(key, item){
     const localItem = localStorage.getItem(key) 
 
-    if (localItem == ""){
+    if (localItem == "" || localItem == null){
         const itemJSON = JSON.stringify([item])  
         localStorage.setItem(key, itemJSON)
     }

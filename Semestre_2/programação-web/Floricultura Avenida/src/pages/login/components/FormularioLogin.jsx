@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { encontrarPor } from "../../../helpers/helpers";
 
 export default function FormularioLogin(){
-
+    
     const {handleSubmit, register} = useForm()
+    const navegador = useNavigate()
 
     /**
      * @param {{nome: string, senha: string}} data
@@ -23,6 +24,7 @@ export default function FormularioLogin(){
         }
 
         toast.success("Login foi um sucesso!")
+        navegador("/")
     }
     return (
         <>

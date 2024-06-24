@@ -1,6 +1,10 @@
 export class Tabela {
-    #_tabela /** @type object[]*/
-    #_localStorageKey /** @type string*/
+    /** @type object[]*/
+    #_tabela 
+    /** @type string*/
+    #_localStorageKey 
+    /** @type Function*/
+    setTabelaHook 
 
     /** @param {string} LocalStorageKey */
     constructor(LocalStorageKey){
@@ -11,8 +15,14 @@ export class Tabela {
     /**
      * @returns object[]
      */
-    get tabela(){
+    getTabela(){
         return this.#_tabela.slice(1)
+    }
+    /**
+     * @param {object[]} tabela
+     */
+    setTabela(tabela){
+        this.#_tabela = tabela 
     }
 
     /** 
@@ -20,46 +30,17 @@ export class Tabela {
      */
     adicionar(objeto){
         this.#validarObjeto(objeto)
+        const tabela2 = [...this.#_tabela]
 
-        this.#_tabela.push(objeto)
-    }
+        if(Object.keys(tabela2[0]).length != Object.keys(objeto).length){
+            throw Error(`O objeto adicionado não é uma instancia válida da tabela! ${objeto}`)
+        }
 
+        tabela2.push(objeto)
 
-    /**
-     * @param {string} campo
-     * @param {*} valor
-     * @returns {object[] | null}
-     */
-    encontrarPor(campo, valor){
-        const objetosComOValor = null
-
-        this.#_tabela.forEach(objeto => {
-            if (objeto[campo] == valor) {
-                objetosComOValor.push(objeto)
-            }
-        })
-
-        return objetosComOValor
-    }
-
-    /**
-     * @param {string} campo
-     * @param {*} valor
-     * @param {object[]} novosValores
-     */
-    mudarPor(campo, valor, novosValores){
-        this.#validarObjeto(novosValores)
-
-        this.#_tabela.forEach((objeto, i, tabela) => {
-
-            if (objeto[campo] == valor) {
-
-                Object.keys(novosValores).forEach(key => {
-                    tabela[i][key] = novosValores[key]
-                })
-            }
-        })
-
+        if(this.setTabelaHook){
+            this.setTabelaHook(tabela2)
+        }
     }
 
     /**
@@ -84,13 +65,61 @@ export class Tabela {
     /**
      * @param {string} campo
      * @param {*} valor
+     * @returns {object[] | null}
+     */
+    encontrarPor(campo, valor){
+        const objetosComOValor = []
+
+        this.#_tabela.forEach(objeto => {
+            if (objeto[campo] == valor) {
+                console.log("hey you")
+                console.log(objeto)
+                objetosComOValor.push(objeto)
+            }
+        })
+
+        console.log("Não é não", objetosComOValor)
+        return objetosComOValor
+    }
+
+    /**
+     * @param {string} campo
+     * @param {*} valor
+     * @param {object} novosValores
+     */
+    mudarPor(campo, valor, novosValores){
+        this.#validarObjeto(novosValores)
+        const tabela2 = [...this.#_tabela]
+
+        tabela2.forEach((objeto, i, tabela) => {
+
+            if (objeto[campo] == valor) {
+
+                Object.keys(novosValores).forEach(key => {
+                    tabela[i][key] = novosValores[key]
+                })
+            }
+        })
+
+        if(this.setTabelaHook){
+            this.setTabelaHook(tabela2)
+        }
+    }
+
+
+    /**
+     * @param {string} campo
+     * @param {*} valor
      */
     deletarPor(campo, valor){
 
-        this.#_tabela = this.#_tabela.filter(objeto => {
+        const tabela2 = this.#_tabela.filter(objeto => {
             return objeto[campo] != valor
         })
         
+        if(this.setTabelaHook){
+            this.setTabelaHook(tabela2)
+        }
     }
 
     enviarParaLocalStorage(){
@@ -104,7 +133,7 @@ export class Tabela {
     #obterDoLocalStorage(key){
         const tabela = JSON.parse(localStorage.getItem(key))
         if(!tabela){
-            throw Error(`Não existe nenhuma tabela a chave "${key}" no localStorage!`)
+            throw Error(`Não existe nenhuma tabela com a chave "${key}" no localStorage!`)
         }
 
         return tabela
@@ -219,6 +248,14 @@ export class Sessao{
             return true
         }
     }
+
+    /**
+     * @param {string} keySessao
+     */
+    static obter(keySessao = "sessao"){
+        return JSON.parse(localStorage.getItem(keySessao))
+    }
+
     /** 
     * @function validarSessao
     * @summary Verifica se uma sessão é válida.

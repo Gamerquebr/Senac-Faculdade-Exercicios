@@ -16,7 +16,7 @@
  * @property {string} id - UUID gerado pelo crypto.randomUUID()
  * @property {string} nome - Nome do usuário
  * @property {string} senha - Senha do usuário
- * @property {boolean} admin - Define se o usuário é adminitrador ou não
+ * @property {boolean} admin - Define se o usuário é administrador ou não
  */
 
 /**

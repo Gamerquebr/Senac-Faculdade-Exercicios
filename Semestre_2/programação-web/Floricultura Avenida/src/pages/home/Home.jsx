@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { Tabela, Sessao } from "../../helpers/helpers"
+import { Sessao } from "../../helpers/helpers"
 import Nav from "./components/nav/Nav"
 import Produto from "./components/Produto"
+import { useTabela } from "../../helpers/useTabela.jsx"
 
 export default function Home(){
     const navegar = useNavigate()
-    const [flores, setFlores] = useState([])
+    const flores = useTabela("flores")
 
 
     useEffect(() => {
@@ -14,16 +15,20 @@ export default function Home(){
             navegar("/login")
         }
 
-        setFlores(new Tabela("flores").tabela)
     }, [])
 
-    const listaProdutos = flores.map(
-        flor => <Produto 
-            key={flor.id} 
-            nome={flor.nome} 
-            valor={flor.valor} 
-            imgUrl={flor.florImg}/>
-    )
+    const listaProdutos = flores.encontrarPor("idReservado", "").map(
+        flor => { 
+            const props = {
+                    id: flor.id,
+                    nome: flor.nome,
+                    valor: flor.valor,
+                    imgUrl: flor.florImg,
+                    flores: flores
+            }
+
+            return <Produto key={flor.id} {...props} />
+    })
 
     return (
         <>

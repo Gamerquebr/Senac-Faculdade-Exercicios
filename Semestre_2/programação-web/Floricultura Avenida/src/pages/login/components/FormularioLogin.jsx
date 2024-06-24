@@ -19,7 +19,7 @@ export default function FormularioLogin(){
         const membro = membros.encontrarUmPor("nome", data.nome)
         console.log(membro)
 
-        if (membro == null){
+        if (!membro){
             toast.error("Nome ou senha incorretos!")
             return
         }

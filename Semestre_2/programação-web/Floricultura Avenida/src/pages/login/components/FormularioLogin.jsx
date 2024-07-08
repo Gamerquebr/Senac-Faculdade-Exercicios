@@ -1,30 +1,37 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { encontrarPor } from "../../../helpers/helpers";
+import { Tabela, Sessao} from "../../../helpers/helpers";
 
 export default function FormularioLogin(){
     
     const {handleSubmit, register} = useForm()
-    const navegador = useNavigate()
+    const navegar = useNavigate()
 
     /**
      * @param {{nome: string, senha: string}} data
      */
     function logar(data){
-        const membro = encontrarPor("nome", data.nome, "membros")
 
-        if (membro.length == 0){
+        const membros = new Tabela("membros")
+
+        /** @type Membro*/
+        const membro = membros.encontrarUmPor("nome", data.nome)
+        console.log(membro)
+
+        if (!membro){
             toast.error("Nome ou senha incorretos!")
             return
         }
-        else if (membro[0].senha != data.senha){
+        else if (membro.senha != data.senha){
             toast.error("Nome ou senha incorretos!")
             return
         }
+
+        Sessao.criar(membro.id)
 
         toast.success("Login foi um sucesso!")
-        navegador("/")
+        navegar("/")
     }
     return (
         <>

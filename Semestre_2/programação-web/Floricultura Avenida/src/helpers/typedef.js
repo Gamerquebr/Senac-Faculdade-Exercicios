@@ -1,6 +1,6 @@
 
 /**
- * @typedef {object} flor
+ * @typedef {object} Flor
  *
  * @property {string} id - UUID gerado pelo crypto.randomUUID()
  * @property {string} nome - Nome da flor
@@ -11,10 +11,14 @@
  */
 
 /**
- * @typedef {object} membro
+ * @typedef {object} Membro
  *
  * @property {string} id - UUID gerado pelo crypto.randomUUID()
  * @property {string} nome - Nome do usuário
  * @property {string} senha - Senha do usuário
- * @property {boolean} admin - Define se o usuário é adminitrador ou não
+ * @property {boolean} admin - Define se o usuário é administrador ou não
+ */
+
+/**
+ * @typedef {object[]} TabelaTipo
  */

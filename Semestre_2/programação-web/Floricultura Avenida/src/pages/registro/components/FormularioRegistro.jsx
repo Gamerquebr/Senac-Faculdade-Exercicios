@@ -1,27 +1,31 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { addToLocalStorage, encontrarPor } from "../../../helpers/helpers";
+import { Tabela } from "../../../helpers/helpers";
 
 
 export default function FormularioRegistro(){
     const {handleSubmit, register} = useForm()
-    const navegador = useNavigate()
+    const navegar = useNavigate()
 
     /**
      * @param {{nome: string, senha: string, confsenha: string}} data
      */
     function registrar(data){
+
+        const membros = new Tabela("membros")
+        
+
         if(data.senha != data.confsenha){
             toast.error("Senhas não são iguais!")
             return 
         }
-        if(encontrarPor("nome", data.nome, "membros").length > 0){
-            toast.error("Esse nome já existe")
+        else if(membros.encontrarUmPor("nome", data.nome)){
+            toast.error("Esse nome já está sendo usado!")
             return
         }
 
-        /** @type membro*/
+        /** @type Membro*/
         const membro = {
             id: crypto.randomUUID(),
             nome: data.nome,
@@ -29,10 +33,11 @@ export default function FormularioRegistro(){
             admin: false
         }
 
-        addToLocalStorage("membros", membro)
+        membros.adicionar(membro)
+        membros.enviarParaLocalStorage()
 
         toast.success("Registro feito!")
-        navegador("/login")
+        navegar("/login")
     }
 
     return (

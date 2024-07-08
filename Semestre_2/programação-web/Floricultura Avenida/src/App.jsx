@@ -1,40 +1,29 @@
-import Admin from './pages/admin/Admin'
-import Home from './pages/home/Home'
-import Login from './pages/login/Login'
-import Registro from './pages/registro/Registro'
+import Home from './pages/home/Home.jsx'
+import Login from './pages/login/Login.jsx'
+import Registro from './pages/registro/Registro.jsx'
 
 import './App.css'
 
-import './helpers/typedef'
+import { Tabela } from './helpers/helpers.js'
+import { membrosData, floresData } from './helpers/placeHolderData.js'
 
-if (localStorage.getItem("membros") == ""){
+if (!localStorage.getItem("membros")){
+    Tabela.iniciar(["id", "nome", "senha", "admin"], "membros")
+    const membros = new Tabela("membros")
 
-    /** @type membro */
-    const adminObjeto = {
-        id: crypto.randomUUID(),
-        nome: "admin",
-        senha: "admin",
-        admin: true
-    } 
-
-    localStorage.setItem("membros", JSON.stringify([adminObjeto]))
+    membrosData.forEach(membro => membros.adicionar(membro))
+    membros.enviarParaLocalStorage()
 }
-if (localStorage.getItem("flores") == ""){
+if (!localStorage.getItem("flores")){
+    Tabela.iniciar(["id", "nome", "valor", "florImg", "idReservado"],"flores")
+    const flores = new Tabela("flores")
 
-    /** @type flor */
-    const florObjeto = {
-        id: crypto.randomUUID(),
-        nome: "cinerária",
-        valor: 12.50,
-        florImg: "",
-        idReservado: ""
-    }
-
-    localStorage.setItem("flores", JSON.stringify([florObjeto]))
+    floresData.forEach(flor => flores.adicionar(flor))
+    flores.enviarParaLocalStorage()
 }
 
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Route,
     Routes
 } from "react-router-dom"
@@ -47,10 +36,9 @@ function App() {
             <Toaster />
             <Router>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/registro" element={<Registro />} />
-                    <Route path="/admin" element={<Admin />} />
+                    <Route path="" element={<Home />} />
+                    <Route path="login" element={<Login />} />
+                    <Route path="registro" element={<Registro />} />
                 </Routes>
             </Router>
         </>

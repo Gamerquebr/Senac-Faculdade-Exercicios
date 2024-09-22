@@ -2,6 +2,7 @@
 DROP SCHEMA IF EXISTS aula04;
 CREATE SCHEMA IF NOT EXISTS aula04;
 USE aula04;
+
 -- Criando a tabela produto
 DROP TABLE IF EXISTS produto;
 CREATE TABLE IF NOT EXISTS produto (
@@ -11,11 +12,13 @@ CREATE TABLE IF NOT EXISTS produto (
     CHECK (qtd_estoque > 0),
     PRIMARY KEY (codigo)
 );
+
 -- Inserindo na tabela produto
 INSERT INTO produto (codigo, descricao, qtd_estoque) VALUES ('001', 'Feijão', 10);
 INSERT INTO produto (codigo, descricao, qtd_estoque) VALUES ('002', 'Arroz', 5);
 INSERT INTO produto (codigo, descricao, qtd_estoque) VALUES ('003', 'Farinha', 15);
 SELECT * FROM produto ;
+
 -- Criando a tabela itensVenda
 DROP TABLE IF EXISTS itensVenda;
 CREATE TABLE IF NOT EXISTS itensVenda (
@@ -30,23 +33,27 @@ CREATE TABLE IF NOT EXISTS itensVenda (
 
 -- Criando trigger
 DELIMITER $$
+
 CREATE TRIGGER trg_itensvenda_AI AFTER INSERT
 ON itensVenda
 FOR EACH ROW
 BEGIN
-UPDATE produto SET produto.qtd_estoque = produto.qtd_estoque - NEW.qtd_vendida
+    UPDATE produto SET produto.qtd_estoque = produto.qtd_estoque - NEW.qtd_vendida
     WHERE produto.codigo = NEW.produto_codigo;
 END$$
+
 DELIMITER ;
 
 DELIMITER $$
+
 CREATE TRIGGER trg_itensvenda_AD AFTER DELETE
 ON itensVenda
 FOR EACH ROW
 BEGIN
-UPDATE produto SET produto.qtd_estoque = produto.qtd_estoque + OLD.qtd_vendida
+    UPDATE produto SET produto.qtd_estoque = produto.qtd_estoque + OLD.qtd_vendida
     WHERE produto.codigo = OLD.produto_codigo;
 END$$
+
 DELIMITER ;
 
 /* 1 – Criar um gatilho/trigger para atualizar o campo qtd_estoque na
@@ -74,7 +81,7 @@ CREATE TRIGGER trg_produto_BU AFTER UPDATE
 ON produto
 FOR EACH ROW
 BEGIN
-    INSERT INTO log VALUES(OLD.codigo, OLD.descricao, NEW.descricao);
+INSERT INTO log VALUES(OLD.codigo, OLD.descricao, NEW.descricao);
 END$$
 
 DELIMITER ;

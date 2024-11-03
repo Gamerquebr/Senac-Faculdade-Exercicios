@@ -1,0 +1,11 @@
+[main_menu]
+main_init_opt = '1. Iniciar jogo'
+main_leader_opt = '2. Placar de líderes'
+main_conf_opt = '3. Configurações'
+main_leave_opt = '4. Sair'
+
+main_input_ask = "\nEscolha uma opção: "
+
+main_goodbye = 'Adeus     :('
+
+[configs_menu]

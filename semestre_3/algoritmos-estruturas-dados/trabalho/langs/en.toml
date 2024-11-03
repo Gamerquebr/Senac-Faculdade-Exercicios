@@ -1,0 +1,36 @@
+language = "English"
+
+[main_menu]
+start_opt = '1. Start Game'
+leader_opt = '2. Leaderboard'
+conf_opt = '3. Configs'
+leave_opt = '4. Quit'
+
+input_ask = "\nChoose an option: "
+
+goodbye = 'Goodbye     :('
+
+[configs_menu]
+greet = "Configs"
+
+difficulty_opt = "1. Change difficulty"
+grid_opt = "2. Change game grid size"
+lang_opt = "3. Change language"
+leader_opt = "4. Clear leaderboard"
+leave_opt = "5. Leave"
+
+input_ask = "\nChoose an option: "
+
+[difficulty]
+ign = "IGN"
+easy = "Easy"
+normal = "Normal"
+hard = "Hard"
+hell = "HELL"
+
+[grid]
+tiny = "TINY"
+small = "Small"
+medium = "Medium"
+big = "Big"
+huge = "HUGE"

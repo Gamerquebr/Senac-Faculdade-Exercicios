@@ -1,12 +1,11 @@
 import os
 
 def render_game(state):
-    clear = 'cls' if os.name == 'nt' else 'clear'
-    os.system(clear)
+    os.system("clear")
 
     while(True):
         if not state.empty():
-            os.system(clear)
+            print("\033[H\033[1J", end="")
             render_frame(state.get())
 
 def render_frame(state):

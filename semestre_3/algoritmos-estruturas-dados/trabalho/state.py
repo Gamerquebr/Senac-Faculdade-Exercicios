@@ -33,51 +33,49 @@ def game_state(state_q: queue.Queue, input_q: queue.Queue):
 
         match input_current:
             case 0:
-                update_head(state_q, head, "o")
+                update_head(cur_state, head, "o")
                 buffer.append(head.copy())
 
                 head[0] -= 1
-                if (tile_have_fruit(state_q, head)):
+                if (tile_have_fruit(cur_state, head)):
                     snake_size += 1
-                    generate_fruit(state_q, size_x, size_y)
+                    generate_fruit(cur_state, size_x, size_y)
 
-                update_head(state_q, head, "ʌ")
-                state_q.put(state_q)
+                update_head(cur_state, head, "ʌ")
+                state_q.put(cur_state)
             case 1:
-                update_head(state_q, head, "o")
+                update_head(cur_state, head, "o")
                 buffer.append(head.copy())
 
                 head[0] += 1
-                if (tile_have_fruit(state_q, head)):
+                if (tile_have_fruit(cur_state, head)):
                     snake_size += 1
-                    generate_fruit(state_q, size_x, size_y)
+                    generate_fruit(cur_state, size_x, size_y)
 
-                update_head(state_q, head, "v")
-                state_q.put(state_q)
+                update_head(cur_state, head, "v")
+                state_q.put(cur_state)
             case 2:
-                update_head(state_q, head, "o")
+                update_head(cur_state, head, "o")
                 buffer.append(head.copy())
 
                 head[1] -= 1
-                if (tile_have_fruit(state_q, head)):
+                if (tile_have_fruit(cur_state, head)):
                     snake_size += 1
-                    generate_fruit(state_q, size_x, size_y)
+                    generate_fruit(cur_state, size_x, size_y)
 
-                update_head(state_q, head, "<")
-                state_q.put(state_q)
+                update_head(cur_state, head, "<")
+                state_q.put(cur_state)
             case 3:
-                update_head(state_q, head, "o")
+                update_head(cur_state, head, "o")
                 buffer.append(head.copy())
 
                 head[1] += 1
-                if (tile_have_fruit(state_q, head)):
+                if (tile_have_fruit(cur_state, head)):
                     snake_size += 1
-                    generate_fruit(state_q, size_x, size_y)
+                    generate_fruit(cur_state, size_x, size_y)
 
-                update_head(state_q, head, ">")
-                state_q.put(state_q)
-
-def update_state(state_q, cur_state, head_updater)
+                update_head(cur_state, head, ">")
+                state_q.put(cur_state)
 
 def update_head(state: list[list[str]], head: list[int], char: str):
     state[head[0]][head[1]] = char

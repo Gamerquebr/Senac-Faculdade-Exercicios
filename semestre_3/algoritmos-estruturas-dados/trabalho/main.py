@@ -6,7 +6,7 @@ from state import game_state
 from render import render_game
 
 def main():
-    game = create_game(18, 18)
+    game = create_game(50, 50)
 
     run_game(game)
 

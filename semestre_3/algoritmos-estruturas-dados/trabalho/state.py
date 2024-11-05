@@ -87,7 +87,11 @@ def update_tail(state: list[list[str]], buffer):
 def generate_fruit(state: list[list[str]], size_x: int, size_y: int):
     rand_x = random.randint(0, size_x - 1)
     rand_y = random.randint(0, size_y - 1)
-    state[rand_y][rand_x] = "@"
+
+    if tile_is_busy(state, [rand_y, rand_x]):
+        generate_fruit(state, size_x, size_y)
+    else:
+        state[rand_y][rand_x] = "@"
 
 def tile_have_fruit(state: list[list[str]], head: list[int]) -> bool:
     if (state[head[0]][head[1]] == "@"):
@@ -96,7 +100,7 @@ def tile_have_fruit(state: list[list[str]], head: list[int]) -> bool:
         return False
 
 def tile_is_busy(state: list[list[str]], head: list[int]) -> bool:
-    if (state[head[0]][head[1]] == "@"):
-        return True
-    else:
+    if (state[head[0]][head[1]] == " "):
         return False
+    else:
+        return True

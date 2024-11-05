@@ -30,7 +30,6 @@ class Settings:
     def __create_game_grid(self) -> list[list]:
         return [[" "] * self.__GRID_SIZES[self.__grid_size] for _ in range(self.__GRID_SIZES[self.__grid_size])]
 
-
     def __load_lang(self) -> dict:
         with open(f"./langs/{self.__language}.toml", "rb") as file:
             return tomllib.load(file)
@@ -41,14 +40,12 @@ class Settings:
             return data["language"], data["difficulty"], data["grid_size"]
 
 
+    # Getters
     def get_game_text(self, subject=None) -> dict:
-        if subject:
-            if subject not in self.__game_text:
-                raise Exception(f"This subject {subject} does not exist")
-            else:
-                return self.__game_text[subject]
+        if subject not in self.__game_text:
+            raise Exception(f"This subject {subject} does not exist")
         else:
-            return self.__game_text
+            return self.__game_text[subject]
 
     def get_game_grid(self) -> list[list]:
         return self.__game_grid
@@ -56,11 +53,23 @@ class Settings:
     def get_game_difficulty(self) -> int:
         return self.__game_difficulty
 
+    def get_game_language(self) -> str:
+        return self.__language
+
     def get_game_grid_len(self) -> int:
         return len(self.__game_grid)
 
+    def get_difficulties(self) -> dict:
+        return self.__DIFFICULTIES
+
+    def get_grid_sizes(self) -> dict:
+        return self.__GRID_SIZES
+
+
+    # Setters
     def set_game_text_language(self, language: str):
         if(language not in self.__LANGUAGES):
+
             raise Exception(f"The language {language} is not supported")
 
         self.__language = language
@@ -80,6 +89,8 @@ class Settings:
         self.__difficulty = difficulty
         self.__update_game_difficulty()
 
+
+    # Updaters
     def __update_game_text(self):
         self.__game_text = self.__load_lang()
 
@@ -87,6 +98,6 @@ class Settings:
         self.__game_grid = self.__create_game_grid()
 
     def __update_game_difficulty(self):
-        self.__game_grid = self.__create_game_grid()
+        self.__game_difficulty = self.__DIFFICULTIES[self.__difficulty]
 
 settings = Settings()

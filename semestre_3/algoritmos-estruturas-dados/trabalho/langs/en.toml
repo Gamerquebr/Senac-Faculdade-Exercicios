@@ -19,6 +19,12 @@ lang_opt = "3. Change language"
 leader_opt = "4. Clear leaderboard"
 leave_opt = "5. Leave"
 
+goback_opt = "Go back"
+
+greet_difficulty = "Difficulties"
+greet_grid = "Grids"
+greet_language = "Languages"
+
 input_ask = "\nChoose an option: "
 
 [difficulty]
@@ -34,3 +40,7 @@ small = "Small"
 medium = "Medium"
 big = "Big"
 huge = "HUGE"
+
+[languages]
+en = "English"
+br = "Brazilian Portuguese"

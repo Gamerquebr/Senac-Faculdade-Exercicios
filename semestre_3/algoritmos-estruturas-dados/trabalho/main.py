@@ -1,6 +1,6 @@
-import threading
-import queue
-import art
+from threading import Thread
+from queue import Queue
+from art import tprint
 
 from input import listen_input
 from state import game_state
@@ -11,11 +11,15 @@ from settings import settings
 
 def main():
     text = settings.get_game_text("main_menu")
+    lang = settings.get_game_text("language")
 
     while True:
         clear_screen()
 
-        art.tprint("Pybrinha")
+        if settings.get_game_language() != lang:
+            text = settings.get_game_text("main_menu")
+
+        tprint("Pybrinha")
 
         print(text["start_opt"])
         print(text["leader_opt"])
@@ -30,22 +34,26 @@ def main():
             case "2":
                 leaderboard()
             case "3":
-                select_config()
+                config()
             case "4":
-                art.tprint(text["goodbye"])
+                tprint(text["goodbye"])
                 break
 
 
 def leaderboard():
     pass
 
-def select_config():
+def config():
     text = settings.get_game_text("configs_menu")
+    lang = settings.get_game_text("language")
 
     while True:
         clear_screen()
 
-        art.tprint(text["greet"])
+        if settings.get_game_language() != lang:
+            text = settings.get_game_text("configs_menu")
+
+        tprint(text["greet"])
 
         print(text["difficulty_opt"])
         print(text["grid_opt"])
@@ -55,20 +63,21 @@ def select_config():
 
         user_input = input(text["input_ask"])
 
-        if(select_config() is not None):
-            return
+        if select_config(user_input):
+            break
+
 
 
 
 def run_game():
-    input_q = queue.Queue(1)
-    state_q = queue.Queue(1)
+    input_q = Queue(1)
+    state_q = Queue(1)
 
     state_q.put(settings.get_game_grid())
 
-    t1 = threading.Thread(target=listen_input, args=[input_q])
-    t2 = threading.Thread(target=render_game, args=[state_q])
-    t3 = threading.Thread(target=game_state, args=[state_q, input_q])
+    t1 = Thread(target=listen_input, args=[input_q])
+    t2 = Thread(target=render_game, args=[state_q])
+    t3 = Thread(target=game_state, args=[state_q, input_q])
 
     t1.start()
     t2.start()

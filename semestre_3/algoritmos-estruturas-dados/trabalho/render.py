@@ -1,11 +1,12 @@
 import os
+from helpers import clean_clear_screen
 
 def render_game(state):
     os.system("clear")
 
     while(True):
         if not state.empty():
-            print("\033[H\033[1J", end="")
+            clean_clear_screen()
             render_frame(state.get())
 
 def render_frame(state):
